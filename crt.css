@@ -1,0 +1,47 @@
+:root {
+
+    --background: #000;
+    --text-color: #fff;
+    --text-link: #fff;
+    --box-shadow: rgba(255,255,255,.5);
+
+    --spring-22-background: var(--background);
+    --spring-22-text: var(--text-color);
+    --spring-22-link: var(--text-link);
+    --fallwinter-2122-background: var(--background);
+    --fallwinter-2122-text: var(--text-color);
+    --fallwinter-2122-link: var(--text-link);
+}
+
+.shell {
+  border: 2px solid #fff;
+  box-sizing: border-box;
+}
+
+
+.spring-22 {
+  background-color: var(--spring-22-background);
+  color: var(--spring-22-text);
+  box-sizing: border-box;
+  border: 2px solid var(--spring-22-text);
+}
+
+.spring-22 a:hover, .spring-22.featured:hover h2 {
+  color: var(--spring-22-link) !important;
+}
+
+.fallwinter-2122 {
+  background-color: var(--fallwinter-2122-background);
+  background-image: url('images/spring-2021-gradient.png');
+  -webkit-filter: grayscale(100%);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  color: var(--fallwinter-2122-text);
+  box-sizing: border-box;
+  border: 2px solid var(--fallwinter-2122-text);
+}
+
+.fallwinter-2122 a:hover, .fallwinter-2122.featured:hover h2 {
+  color: var(--fallwinter-2122-link) !important;
+}
