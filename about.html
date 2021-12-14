@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>School for Poetic Computation</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="title" content="School for Poetic Computation">
+    <meta name="description" content="The School for Poetic Computation is changing. This summer, we are making a temporary space together: a COCOON. We invite you into our collective studies as we work towards an experimental curriculum that can grow and transform over time.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://sfpc.io/">
+    <meta property="og:title" content="SFPC Summer 2021 Cocoon">
+    <meta property="og:description" content="The School for Poetic Computation is changing. This summer, we are making a temporary space together: a COCOON. We invite you into our collective studies as we work towards an experimental curriculum that can grow and transform over time.">
+    <meta property="og:image" content="http://sfpc.io/cocoon/sfpc-cocoon.jpg">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="http://sfpc.io/">
+    <meta property="twitter:title" content="SFPC Summer 2021 Cocoon">
+    <meta property="twitter:description" content="The School for Poetic Computation is changing. This summer, we are making a temporary space together: a COCOON. We invite you into our collective studies as we work towards an experimental curriculum that can grow and transform over time.">
+    <meta property="twitter:image" content="http://sfpc.io/cocoon/sfpc-cocoon.jpg">
+    <link href="styles.css" rel="stylesheet">
+    <link id="mode" rel="stylesheet" type="text/css" href="lcd.css" />
+    <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+
+    <script src="jquery-3.6.0.min.js"></script>
+
+
+</head>
+
+<body>
+
+  <div id="header">
+
+    <div class="grid-2">
+      <div class="grid-2">
+        Poetic computation is an act of resistance against utilitarian notions of progress and efficiency.
+      </div>
+    </div>
+
+    <div class="grid-2">
+          <div class="grid-4">
+            <ul class="nav">
+              <li><a id="link-participate" href="participate.html">participate</a></li>
+            </ul>
+          </div>
+          <div class="grid-4">
+            <ul class="nav">
+              <li><a id="link-about" href="about.html">about</a></li>
+              <li><a id="link-blog" href="https://medium.com/@sfpc" target="_blank">blog</a></li>
+              <li><a id="link-support" href="https://withfriends.co/school_for_poetic_computation" target="_blank">support us</a></li>
+            </ul>
+          </div>
+          <div class="grid-4">
+            <ul class="nav">
+              <li><a id="link-newsletter" href="https://stats.sender.net/forms/e09QVa/view" target="_blank">newsletter</a></li>
+              <li><a id="" href="mailto:info@sfpc.io">email</a></li>
+              <li><a id="" href="https://instagram.com/sfpc_nyc" target="_blank">IG</a> / <a href="https://twitter.com/sfpc" target="_blank">TW</a> / <a href="https://www.are.na/school-for-poetic-computation" target="_blank">**</a></li>
+            </ul>
+          </div>
+          <div class="grid-4">
+            <div class="nav logo">
+              <a href="index.html"><img src="images/sfpc-logo.svg"></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+  </div>
+
+      <div id="footer">
+        <div class="mode"><button id="mode-toggle">switch to cathode-ray mode</button></a></div>
+      </div>
+
+      <div id="shell" class="shell about">
+
+
+        <select id= "allSections" onchange="sectionJump(this.value)">
+          <option value ="">Jump to section...</option>
+          <option value ="mission">Mission</option>
+          <option value ="participating">Participating</option>
+          <option value ="visiting">Visiting</option>
+          <option value ="stewards">Stewards</option>
+          <option value ="scholarships">Scholarships</option>
+          <option value ="finances">Support & Finances</option>
+          <option value ="press">Press</option>
+        </select>
+
+        <h4 class="breadcrumb"><a href="">about</a></h4>
+
+        <div id="about">
+
+                <section id="mission">
+                    <div class="grid-2">
+                      <h1>Mission</h1>
+                    </div>
+
+                    <div class="grid-2">
+                      <p>
+                        The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It is a place for unlearning and learning. It’s a hybrid of a school, residency, and research group.
+                        We are committed to realizing the vision of a beautiful school where people who are Black, Indigenous, Disabled, and/or LGBTQIA+ are empowered to share their ideas and study together.
+                      </p><p>
+                        <a href="#">more about our mission, pedagogy and how we define poetic computation...</a>
+                        </p>
+                    </div>
+                </section>
+
+                <section id="participating">
+                    <div class="grid-2">
+                      <h1>Participating </h1>
+                    </div>
+
+                    <div class="grid-2">
+                      <p>
+                        We seek to put together a cohort of people with diverse backgrounds and interests who will have a lot to offer to each other as peers. We center people from identities and backgrounds that are often marginalized and excluded from art, technology, and higher education spaces, and look for a cohort with a wide range of passions, skills, experiences, and technical abilities. Above all, we look for openness to building a shared experience around learning, critical theory, art making, and technology.
+                      <BR><BR>
+                        Our classes are conducted in spoken English with audiovisual materials such as slides, code examples and video. Please <a href="">contact us</a> to let us know how we can make our school more accessible to you.
+                      </p><p>
+                        <a href="#">more about applying, participating and accessibility...</a>
+                        </p>
+                    </div>
+                </section>
+
+
+                <section id="visiting">
+                    <div class="grid-2">
+                      <h1>Visiting </h1>
+                    </div>
+
+                    <div class="grid-2">
+                      <p>
+                        The School for Poetic Computation does not currently have a physical location and since Spring 2020 we have been operating online as we navigate the COVID-19 pandemic. From 2015 to 2020, we were located in the Westbeth Artist Community of West Village, New York City, on the unceded land of the Lenape people. We studied within the computational history lineage of Bell Labs that occupied that space many years before. We are in search for a new temporary and permanent space; if you have any leads, please <a href="">contact us</a>!
+                        <BR><BR>
+                        All members and guests of the SFPC community agree to uphold SFPC’s Community Agreement when entering community spaces, both physically and online. When we commit to actively participating in the social material of our learning, we can best work together to create boundaries that make it easier for everyone to feel as safe and comfortable as possible.
+                      </p><p class="large">
+                        <a href="#">SFPC Community Agreement</a>
+                        </p>
+                    </div>
+                </section>
+
+                <section id="stewards">
+                    <div class="grid-2">
+                      <h1>Stewards </h1>
+                    </div>
+
+                    <div class="grid-2">
+                      <p>
+                        Our school is cooperatively stewarded by artists, teachers, and creative practitioners who are engaged in communities of practice spanning art, computation, poetry, critical theory, publishing and community organizing. Our cooperative is rooted in shared values informed by a communist politic which emphasizes: trust, friendship, healthy conflict & boundaries, and support.
+                       </p><p>
+                        <a href="#">more about our cooperative leadership structure...</a>
+                        </p>
+
+                        <div class="stewards">
+                          <div class="grid-2">
+                            <h2>Co-???</h2>
+                            <p class="medium">
+                              <a href="">Zainab Aliyu</a>
+                              <span class="roles">Communications, Programming, Publishing</span>
+                              <a href="">Todd Anderson</a>
+                              <span class="roles">Community, Finances</span>
+                              <a href="">American Artist</a>
+                              <span class="roles">Development, Finances, Publishing</span>
+                              <a href="">Neta Bomani</a>
+                              <span class="roles">Programming, Publishing</span>
+                              <a href="">Melanie Hoff</a>
+                              <span class="roles">Programming, Operations</span>
+                              <a href="">Galen Macdonald</a>
+                              <span class="roles">Programming, Operations, Finances</span>
+                              <a href="">Celine Wong Katzman</a>
+                              <span class="roles">Development, Partnerships</span>
+                            </p>
+
+                          </div>
+                          <div class="grid-2">
+                            <h2>Accountability stewards</h2>
+                            <p class="medium">
+                              <a href="">Emma Rae Bruml</a><BR>
+                              <a href="">Luke Demarest</a><BR>
+                              <a href="">Nabil Hassein</a>
+                            </p>
+
+                            <h2>Previous leadership</h2>
+                              <span class="roles">The following people were previous leaders but are no longer stewarding the school:</span>
+
+                            <p class="medium">
+                              Taeyoon Choi, Lauren Gardner, Zach Lieberman, Jen Lowe, Amit Pitaru
+                            </p>
+
+                          </div>
+
+                        </div>
+                    </div>
+                </section>
+
+
+                <section id="scholarships">
+                    <div class="grid-2">
+                      <h1>Scholarships</h1>
+                    </div>
+
+                    <div class="grid-2">
+                      <p>
+                        If you can’t pay full tuition, we really still want you to apply. Our application will ask you how much you can pay. We will offer subsidized positions in all of our classes, once each one has enough students enrolled that we’re able to do so. We have also started a <a href="">scholarship fund</a>, and we will be offering additional scholarships as community members <a href="">redistribute their wealth</a> through SFPC. We direct scholarship funds towards students who are low-income, Black, Indigenous, racialized, gendered, disabled, Queer, trans, underrepresented, oppressed and minoritized.</p><p>
+                          <a href="#">more about scholarships...</a>
+                          </p>
+                    </div>
+                </section>
+
+
+
+                <section id="finances">
+                    <div class="grid-2">
+                      <h1>Support & Finances </h1>
+                    </div>
+
+                    <div class="grid-2">
+                      <p>
+                        We're committed to radical transparency and keeping the public informed on how we make and spend money and we publish our finances <a href="">here</a>.
+                        <br><BR>We are so thankful to our generous donors and <a href="">members</a> for supporting scholarships in such a direct way. For SFPC to be the kind of place the community has always meant it to be, it needs to become a platform for wealth redistribution. If you are a former student, prospective student, or friend of the school, and you have the financial privilege to do so, <a href="">please donate generously</A>. There is enough wealth in this community to make sure no one is ever rejected because of their inability to pay, and becoming that school will make SFPC the impactful, imaginative, transformative center of poetry and justice that we know it can be. We know that inside this community there is more capacity for mutual aid and redistribution, and we are always looking for help elsewhere.
+                        </p><p>
+                          <a href="#">more about funding, memberships and finances...</a>
+                          </p>
+                    </div>
+                </section>
+
+                <section id="press">
+                    <div class="grid-2">
+                      <h1>Press</h1>
+                    </div>
+
+                    <div class="grid-2">
+                      <p>
+                        We are always open to sharing our story with others. For press inquiries, please <a href="">contact us</a>.
+                      </p><p>
+                          <a href="#">read what has been written about us...</a>
+                          </p>
+                    </div>
+                </section>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+<script src="outside.js"></script>
+</p>
+
+</body>
+</html>

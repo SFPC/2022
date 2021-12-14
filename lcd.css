@@ -1,30 +1,48 @@
 :root {
-    --spring-22-background: #C8C8A7;
-    --spring-22-text: #000;
-    --spring-22-link: #777744;
+    --spring-2022-background: #C8C8A7;
+    --spring-2022-text: #000;
+    --spring-2022-link: #777744;
+
     --fallwinter-2122-background: #fff;
     --fallwinter-2122-text: #000;
     --fallwinter-2122-link: #8866aa;
 
-    --background: var(--spring-22-background);
-    --text-color: var(--spring-22-text);
-    --text-link: var(--spring-22-link);
+    --cocoon-2021-background: #bb905e;
+    --cocoon-2021-text: #211060;
+    --cocoon-2021-link: hsl(165, 53%, 25%);
+
+    --codesocieties-2020-background: blueviolet;
+    --codesocieties-2020-text: #fff;
+    --codesocieties-2020-link: #fff;
+
+    --background: var(--spring-2022-background);
+    --text-color: var(--spring-2022-text);
+    --text-link: var(--spring-2022-link);
     --box-shadow: rgba(0,0,0,.3);
 
 }
 
 
+select#allSections {
+  background: rgba(255,255,255,.8);
+  backdrop-filter: blur(3px);
+}
 
-.spring-22 {
-  background-color: var(--spring-22-background);
-  color: var(--spring-22-text);
+
+.spring-2022 {
+  background-color: var(--spring-2022-background);
+  color: var(--spring-2022-text);
   box-sizing: border-box;
-  border: 2px solid var(--spring-22-text);
+  border-color: var(--spring-2022-text);
 }
 
-.spring-22 a:hover, .spring-22.featured:hover h2 {
-  color: var(--spring-22-link) !important;
-}
+        .spring-2022 a:hover, .spring-2022.featured:hover h2 {
+          color: var(--spring-2022-link) !important;
+        }
+
+        .spring-2022.featured h4.type  {
+          color: var(--spring-2022-text);
+        }
 
 .fallwinter-2122 {
   background-color: var(--fallwinter-2122-background);
@@ -34,9 +52,39 @@
   background-size: 100%;
   color: var(--fallwinter-2122-text);
   box-sizing: border-box;
-  border: 2px solid var(--fallwinter-2122-text);
+  border-color: var(--fallwinter-2122-text);
 }
 
-.fallwinter-2122 a:hover, .fallwinter-2122.featured:hover h2 {
-  color: var(--fallwinter-2122-link) !important;
+        .fallwinter-2122 a:hover, .fallwinter-2122.featured:hover h2 {
+          color: var(--fallwinter-2122-link) !important;
+        }
+
+
+
+.cocoon-2021 {
+  background-color: var(--cocoon-2021-background);
+  color: var(--cocoon-2021-text);
+  box-sizing: border-box;
+  border-color: var(--cocoon-2021-text);
+  background-image: url('images/cocoon-bg.png');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-blend-mode: screen;
+}
+
+/*
+        .cocoon-2021.featured h4.type  {
+          color: var(--cocoon-2021-text) !important;
+        } */
+
+.codesocieties-2020 {
+  background-color: var(--codesocieties-2020-background);
+  color: var(--codesocieties-2020-text);
+  box-sizing: border-box;
+  border-color: var(--codesocieties-2020-text);
+  background-image: url('images/knot-2.png');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }

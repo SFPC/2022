@@ -1,16 +1,25 @@
 :root {
 
     --background: #000;
-    --text-color: #fff;
-    --text-link: #fff;
+    --text-color: #DDDDDD;
+    --text-link: #DDDDDD;
     --box-shadow: rgba(255,255,255,.5);
 
-    --spring-22-background: var(--background);
-    --spring-22-text: var(--text-color);
-    --spring-22-link: var(--text-link);
+    --spring-2022-background: var(--background);
+    --spring-2022-text: var(--text-color);
+    --spring-2022-link: var(--text-link);
+
+    --cocoon-2021-background: var(--background);
+    --cocoon-2021-text: var(--text-color);
+    --cocoon-2021-link: var(--text-link);
+
     --fallwinter-2122-background: var(--background);
     --fallwinter-2122-text: var(--text-color);
     --fallwinter-2122-link: var(--text-link);
+}
+
+body {
+  color: var(--text-color);
 }
 
 .shell {
@@ -18,30 +27,46 @@
   box-sizing: border-box;
 }
 
+select#allSections {
+  background: rgba(255,255,255,1);
+  backdrop-filter: blur(0px);
+  color: var(--background);
+}
 
-.spring-22 {
-  background-color: var(--spring-22-background);
-  color: var(--spring-22-text);
+.bio {
+  -webkit-filter: grayscale(100%);
+}
+
+.featured {
+  -webkit-filter: grayscale(100%);
+  background-color: var(--background) !important;
+  color: var(--text-color) !important;
   box-sizing: border-box;
-  border: 2px solid var(--spring-22-text);
+  border-color: var(--text-color) !important;
 }
 
-.spring-22 a:hover, .spring-22.featured:hover h2 {
-  color: var(--spring-22-link) !important;
-}
+        .featured:hover {
+          box-shadow: 0px 0px 25px var(--box-shadow);
+        }
 
 .fallwinter-2122 {
-  background-color: var(--fallwinter-2122-background);
   background-image: url('images/spring-2021-gradient.png');
-  -webkit-filter: grayscale(100%);
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: 100%;
-  color: var(--fallwinter-2122-text);
-  box-sizing: border-box;
-  border: 2px solid var(--fallwinter-2122-text);
 }
 
-.fallwinter-2122 a:hover, .fallwinter-2122.featured:hover h2 {
-  color: var(--fallwinter-2122-link) !important;
+.cocoon-2021 {
+  background-image: url('images/cocoon-bg.png');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-blend-mode: screen;
+}
+
+.codesocieties-2020 {
+  background-image: url('images/knot-2.png');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }

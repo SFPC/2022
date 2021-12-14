@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>School for Poetic Computation</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="title" content="School for Poetic Computation">
+    <meta name="description" content="The School for Poetic Computation is changing. This summer, we are making a temporary space together: a COCOON. We invite you into our collective studies as we work towards an experimental curriculum that can grow and transform over time.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://sfpc.io/">
+    <meta property="og:title" content="SFPC Summer 2021 Cocoon">
+    <meta property="og:description" content="The School for Poetic Computation is changing. This summer, we are making a temporary space together: a COCOON. We invite you into our collective studies as we work towards an experimental curriculum that can grow and transform over time.">
+    <meta property="og:image" content="http://sfpc.io/cocoon/sfpc-cocoon.jpg">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="http://sfpc.io/">
+    <meta property="twitter:title" content="SFPC Summer 2021 Cocoon">
+    <meta property="twitter:description" content="The School for Poetic Computation is changing. This summer, we are making a temporary space together: a COCOON. We invite you into our collective studies as we work towards an experimental curriculum that can grow and transform over time.">
+    <meta property="twitter:image" content="http://sfpc.io/cocoon/sfpc-cocoon.jpg">
+    <link href="styles.css" rel="stylesheet">
+    <link id="mode" rel="stylesheet" type="text/css" href="lcd.css" />
+    <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+
+    <script src="jquery-3.6.0.min.js"></script>
+
+
+</head>
+
+<body>
+
+      <div id="header">
+
+        <div class="grid-2">
+          <div class="grid-2">
+            Poetic computation is an act of resistance against utilitarian notions of progress and efficiency.
+          </div>
+        </div>
+
+        <div class="grid-2">
+              <div class="grid-4">
+                <ul class="nav">
+                  <li><a id="link-participate" href="participate.html">participate</a></li>
+                </ul>
+              </div>
+              <div class="grid-4">
+                <ul class="nav">
+                  <li><a id="link-about" href="about.html">about</a></li>
+                  <li><a id="link-blog" href="https://medium.com/@sfpc" target="_blank">blog</a></li>
+                  <li><a id="link-support" href="https://withfriends.co/school_for_poetic_computation" target="_blank">support us</a></li>
+                </ul>
+              </div>
+              <div class="grid-4">
+                <ul class="nav">
+                  <li><a id="link-newsletter" href="https://stats.sender.net/forms/e09QVa/view" target="_blank">newsletter</a></li>
+                  <li><a id="" href="mailto:info@sfpc.io">email</a></li>
+                  <li><a id="" href="https://instagram.com/sfpc_nyc" target="_blank">IG</a> / <a href="https://twitter.com/sfpc" target="_blank">TW</a> / <a href="https://www.are.na/school-for-poetic-computation" target="_blank">**</a></li>
+                </ul>
+              </div>
+              <div class="grid-4">
+                <div class="nav logo">
+                  <a href="index.html"><img src="images/sfpc-logo.svg"></a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+      </div>
+
+      <div id="footer">
+        <div class="mode"><button id="mode-toggle">switch to cathode-ray mode</button></a></div>
+      </div>
+
+      <div id="shell" class="shell about">
+
+
+        <select id= "allSections" onchange="sectionJump(this.value)">
+          <option value ="">Jump to section...</option>
+          <option value ="introduction">Introduction</option>
+          <option value ="classes">Classes</option>
+        </select>
+
+        <h4 class="breadcrumb"><a href="">participate</a></h4>
+
+        <div id="spring-22">
+
+                <section id="current">
+                    <div class="grid-2">
+                      <h1>Current & Upcoming</h1>
+                    </div>
+
+                    <div class="grid-2">
+                      <p>
+                        The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It is a place for unlearning and learning. It’s a hybrid of a school, residency, and research group.
+                        We are committed to realizing the vision of a beautiful school where people who are Black, Indigenous, Disabled, and/or LGBTQIA+ are empowered to share their ideas and study together.
+                      </p><p>
+                        <a href="#">more about participating at SFPC...</a>
+                        </p>
+                    </div>
+                </section>
+
+
+                <section id="past" class="stacked">
+                    <div class="grid-1">
+                      <h1>Past</h1>
+                    </div>
+
+                    <div class="grid-1 participate">
+                      <div class="grid-4 featured spring-2022 session" data-location="spring-2021">
+                        <div class="featured-text">
+                          <img src="images/cocoon0.jpg">
+                          <div class="top">
+                            <h4 class="type"><a href="https://sfpc.io/cocoon/">session</a></h4>
+                            <h2 class="title">Spring 2022</h2>
+                          </div>
+                          <div class="bottom">
+                            <h4 class="details">March 16 - May 26, 2021 <span class="dot">·</span> 4 classes · Applications open </h4>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="grid-4 featured" data-location="https://withfriends.co/event/13268385/meet_the_participants_of_fall_2021">
+                        <div class="featured-text">
+                          <img src="images/fall-2019-mtp.jpg">
+                          <div class="top">
+                            <h4 class="type"><a href="https://sfpc.io/fall-2021/">event</a></h4>
+                            <h2 class="title">Meet the Participants of Fall 2021</h2>
+                          </div>
+                          <div class="bottom">
+                            <h4 class="details">January 4, 2020 <span class="dot">·</span>6pm </h4>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="grid-4 featured fallwinter-2122 session" data-location="https://sfpc.io/fall-2021/">
+                        <div class="featured-text">
+                          <img src="images/fallspring-2122.jpeg">
+                          <div class="top">
+                            <h4 class="type"><a href="https://sfpc.io/fall-2021/">session</a></h4>
+                            <h2 class="title">Fall/Winter 2021-22</h2>
+                          </div>
+                          <div class="bottom">
+                            <h4 class="details">October 26, 2021 - March 10, 2022 <span class="dot">·</span> 2 classes · Applications closed </h4>
+                          </div>
+                        </div>
+                      </div>
+
+
+                      <div class="grid-4 featured" data-location="https://radio.montezpress.com/#/show/2297">
+                        <div class="featured-text">
+                          <img src="https://s3.us-east-1.amazonaws.com/montez-radio/images/images/2021_11_19___12_thumb.jpg">
+                          <div class="top">
+                            <h4 class="type"><a href="https://sfpc.io/fall-2021/">event</a></h4>
+                            <h2 class="title">AncestryandMe x Montez Press Radio</h2>
+                          </div>
+                          <div class="bottom">
+                            <h4 class="details">January 4, 2020 <span class="dot">·</span> 4pm </h4>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="grid-4 featured" data-location="https://withfriends.co/event/13268385/meet_the_participants_of_fall_2021">
+                        <div class="featured-text">
+                          <img src="images/fall-2019-mtp.jpg">
+                          <div class="top">
+                            <h4 class="type"><a href="https://sfpc.io/fall-2021/">event</a></h4>
+                            <h2 class="title">Reading, Writing & Compiling Showcase</h2>
+                          </div>
+                          <div class="bottom">
+                            <h4 class="details">January 4, 2020 <span class="dot">·</span>6pm </h4>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="grid-4 featured cocoon-2021 session" data-location="https://sfpc.io/cocoon/">
+
+                        <div class="featured-text">
+                          <img src="images/cocoon0.jpg">
+                          <div class="top">
+                            <h4 class="type"><a href="https://sfpc.io/cocoon/">session</a></h4>
+                            <h2 class="title">COCOON</h2>
+                          </div>
+                          <div class="bottom">
+                            <h4 class="details">July 11 - August 26, 2021 <span class="dot">·</span> 5 classes · Applications closed </h4>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="grid-4 featured codesocieties-2020 session" data-location="https://sfpc.io/code-societies/">
+                        <div class="featured-text">
+                          <img src="https://sfpc.io/static/img/codesocieties/fade.gif">
+                          <div class="top">
+                            <h4 class="type"><a href="https://sfpc.io/code-societies/">session</a></h4>
+                            <h2 class="title">Code Societies (Winter 2020)</h2>
+                          </div>
+                          <div class="bottom">
+                            <h4 class="details">July 11 - August 26, 2021 <span class="dot">·</span> 14 classes </h4>
+                          </div>
+                        </div>
+                      </div>
+
+
+                    </div>
+                </section>
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+<script src="outside.js"></script>
+</p>
+
+</body>
+</html>

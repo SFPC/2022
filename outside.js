@@ -25,12 +25,41 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 
+
+$(window).scroll(function(){
+  var scrollTop = $(window).scrollTop();
+});
+
+
+
+function sectionJump(value){
+  // var top = document.getElementById(value).offsetTop + 200;
+  // window.scrollTo(0, top);
+	document.getElementById(value).scrollIntoView({
+    block: 'start',
+    behavior: 'smooth',
+  });
+}
+
+
 $(window).on("load", function() {
 
 
 });
 
 $(document).ready(function() {
+
+
+
+//
+// if $("h4.breadcrumb a").innerHTML.indexOf("about") {
+//   $('a#link-about').addClass('underline');
+// } else {
+//   themeToggle.innerText = 'you are in cathode-ray mode. switch to liquid crystal mode.'
+//   $('#current-mode').html('cathode-ray')
+// }
+
+
 
   if (modeStyles.href.includes('lcd')) {
     themeToggle.innerText = 'you are in liquid crystal mode. switch to cathode-ray mode.'
