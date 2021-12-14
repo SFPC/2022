@@ -600,7 +600,7 @@ p a {
   border-radius: 100%;
 }
 
-section.stacked {
+section.stacked-4 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -621,21 +621,32 @@ section.stacked {
 display: 100%;
 }
 
-section.stacked .grid-1{
+section.stacked-4 .grid-1{
   display: grid !important;
   grid-template-columns: repeat(4,1.2fr);
   /* grid-auto-rows: 60%; */
   grid-column-gap: var(--body-margin);
-  grid-row-gap: var(--body-margin);
-  margin-bottom: var(--text-margin);
+  grid-row-gap: calc(var(--body-margin)*2);
+  margin-bottom: calc(var(--text-margin));
 }
 
-      section.stacked .grid-1 .grid-4{
+      section.stacked-4 .grid-1 .grid-4{
         width: 100% !important;
       }
 
 
+      .stacked-2 {
+        display: grid !important;
+        grid-template-columns: repeat(2,1.2fr);
+        /* grid-auto-rows: 60%; */
+        grid-column-gap: var(--body-margin);
+        grid-row-gap: calc(var(--body-margin)*2);
+        /* margin-bottom: calc(var(--text-margin)); */
+      }
 
+            .stacked-4 .grid-4{
+              width: 100% !important;
+            }
 
 
 
@@ -713,13 +724,13 @@ section.stacked .grid-1{
             margin: var(--header-height) auto auto auto;
         }
 
-        section.stacked .grid-1{
+        section.stacked-4 .grid-1{
           grid-template-columns: repeat(2,1.2fr);
           grid-column-gap: var(--body-margin);
           grid-row-gap: var(--body-margin);
         }
 
-              section.stacked .grid-1 .grid-4{
+              section.stacked-4 .grid-1 .grid-4{
                 width: 100% !important;
               }
 
