@@ -632,8 +632,11 @@ display: 100%;
 
       .stacked .grid-1.stacked-2{
         grid-template-columns: repeat(2,1.2fr) !important;
-        margin-top: calc(var(--text-margin));
         margin-bottom: 0px;
+      }
+
+      .body-margin-top {
+        margin-top: calc(var(--text-margin));
       }
 
       .stacked .grid-1 .grid-4{
