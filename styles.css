@@ -491,10 +491,6 @@ select#allSections:focus {
       }
 
 
-      .participate .item:nth-child(2n) {
-          page-break-after: always; /* CSS 2.1 syntax */
-          break-after: always; /* New syntax */
-        }
 
       .grid-4.featured .dot {
         display: block;
@@ -621,7 +617,7 @@ section.stacked-4 {
 display: 100%;
 }
 
-section.stacked-4 .grid-1{
+.stacked .grid-1{
   display: grid !important;
   grid-template-columns: repeat(4,1.2fr);
   /* grid-auto-rows: 60%; */
@@ -630,23 +626,25 @@ section.stacked-4 .grid-1{
   margin-bottom: calc(var(--text-margin));
 }
 
-      section.stacked-4 .grid-1 .grid-4{
+      .stacked-4{
+        grid-template-columns: repeat(4,1.2fr);
+      }
+
+      .stacked .grid-1.stacked-2{
+        grid-template-columns: repeat(2,1.2fr) !important;
+        margin-top: calc(var(--text-margin));
+        margin-bottom: 0px;
+      }
+
+      .stacked .grid-1 .grid-4{
         width: 100% !important;
       }
 
+      /* section.stacked .grid-1 .grid-4{
+        width: 100% !important;
+      } */
 
-      .stacked-2 {
-        display: grid !important;
-        grid-template-columns: repeat(2,1.2fr);
-        /* grid-auto-rows: 60%; */
-        grid-column-gap: var(--body-margin);
-        grid-row-gap: calc(var(--body-margin)*2);
-        /* margin-bottom: calc(var(--text-margin)); */
-      }
 
-            .stacked-4 .grid-4{
-              width: 100% !important;
-            }
 
 
 
