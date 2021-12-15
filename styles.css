@@ -136,9 +136,7 @@ h1, p.large{
 }
 
 
-        .session h2.title {
-          font-weight: lighter;
-        }
+
 
 h2 {
   font-size: var(--medium-text);
@@ -440,7 +438,15 @@ select#allSections:focus {
   o-transition: all .2s ease-out;
 }
 
-      .session a {
+      .featured h2.title {
+        font-weight: lighter;
+          transition: all .2s ease-out;
+          -moz-transition: all .2s ease-out;
+          ms-transition: all .2s ease-out;
+          o-transition: all .2s ease-out;
+      }
+
+      .featured a, .featured {
         transition: all .2s ease-out;
         -moz-transition: all .2s ease-out;
         ms-transition: all .2s ease-out;
