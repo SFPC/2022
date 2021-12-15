@@ -18,7 +18,7 @@
     --main-font: 'Hershey', sans-serif;
     --main-small-text: calc(14px + 0.1vw);
     --main-small-line-height: 1;
-    --main-medium-text: calc(24px + 0.1vw);
+    --main-medium-text: calc(20px + 0.34vw);
     --main-medium-line-height: 1.1;
     --main-large-text: calc(24px + 2vw);
     --main-large-line-height: 1;
