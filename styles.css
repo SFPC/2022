@@ -218,6 +218,8 @@ img {
     overflow: scroll;
     border-radius: var(--border-rad);
     position: fixed;
+    left: calc(var(--body-margin)/2);
+    bottom: var(--header-height);
 }
 
 
@@ -363,6 +365,14 @@ section {
           width: 50%;
         }
 
+        section.closed {
+          display: flex;
+          margin-bottom: 0px !important;
+          padding-bottom: var(--text-margin);
+          border-bottom: 0px !important;
+          /* column-gap: calc(var(--text-margin)); */
+        }
+
 
 
 
@@ -413,7 +423,7 @@ select#allSections:focus {
 }
 
 
-        .home, .about, .blog, .people p{
+        .home, .about, .closed, .blog, .people p{
             font-family: var(--main-font);
             color: var(--text);
         }
