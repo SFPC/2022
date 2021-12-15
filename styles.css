@@ -778,16 +778,17 @@ section.stacked-4 {
   height: 0;
   padding-bottom: 56.25%;
   overflow: hidden;
+  border-radius: var(--border-rad);
 }
 .carousel--item figure img {
   position: absolute;
   z-index: 1;
   height: 100%;
-  width: 100%;
-  -o-object-fit: cover;
+  width: auto;
+  /* -o-object-fit: cover;
      object-fit: cover;
   vertical-align: middle;
-  transform-origin: center;
+  transform-origin: center; */
 }
 .carousel--item h2 {
   position: absolute;
@@ -809,7 +810,7 @@ section.stacked-4 {
 }
 .carousel--progress-bar {
   position: absolute;
-  z-index: 1;
+  z-index: 1000;
   top: 0;
   left: 0;
   width: 100%;

@@ -28,7 +28,7 @@ class DragScroll {
     'events',
     'calculate',
     'raf',
-    'handleWheel',
+    // 'handleWheel',
     'move',
     'raf',
     'handleTouchStart',
@@ -44,10 +44,10 @@ class DragScroll {
     this.maxScroll = this.wrapWidth - this.$el.clientWidth;
   }
 
-  handleWheel(e) {
-    this.progress += e.deltaY;
-    this.move();
-  }
+  // handleWheel(e) {
+  //   this.progress += e.deltaY;
+  //   this.move();
+  // }
 
   handleTouchStart(e) {
     e.preventDefault();
@@ -75,7 +75,7 @@ class DragScroll {
 
   events() {
     window.addEventListener('resize', this.calculate);
-    window.addEventListener('wheel', this.handleWheel);
+    // window.addEventListener('wheel', this.handleWheel);
     //
     this.$el.addEventListener('touchstart', this.handleTouchStart);
     window.addEventListener('touchmove', this.handleTouchMove);
