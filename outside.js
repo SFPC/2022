@@ -41,6 +41,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 $(window).scroll(function(){
   var scrollTop = $(window).scrollTop();
+
+
+
 });
 
 
@@ -61,6 +64,11 @@ $(window).on("load", function() {
 });
 
 $(document).ready(function() {
+
+  let mobileBrowser = checkMobile()
+  if(mobileBrowser){
+  }
+
 
 
 
@@ -94,7 +102,7 @@ $(document).ready(function() {
 
     let mobileBrowser = checkMobile()
     if(mobileBrowser){
-
+          // $('.logo').addClass("hide");
     }
     else{
 
