@@ -269,6 +269,17 @@ a {
           float: right;
         }
 
+        .logo {
+          transition: all .2s ease-out;
+          -moz-transition: all .2s ease-out;
+          ms-transition: all .2s ease-out;
+          o-transition: all .2s ease-out;
+        }
+
+        .logo:hover {
+          opacity: .6;
+        }
+
 #footer {
     position: fixed;
     bottom: 0px;
