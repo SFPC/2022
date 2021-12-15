@@ -841,4 +841,11 @@ section.stacked-4 {
           line-height: calc(var(--footer-height) - var(--body-margin)/2);
         }
 
+
+        select#allSections {
+          font-size: var(--small-text);
+        }
+
+
+
 }
