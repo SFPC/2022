@@ -32,6 +32,15 @@
 }
 
 
+
+
+@font-face {
+    font-family: 'Self Modern';
+    src: url('fonts/bretagne_self-modern_italic_web.ttf');
+    font-weight: normal;
+    font-style: italic;
+}
+
 @font-face {
     font-family: 'Hershey';
     src: url('fonts/Hershey-Noailles-Futura-Duplex-Bold.woff2') format('woff2'),
