@@ -244,6 +244,12 @@ a {
     line-height: 1.25;
 }
 
+
+        .definition-marquee {
+          display: none;
+          visibility: hidden;
+        }
+
         #header .grid-2 {
           width: 50%;
           display: flex;
@@ -732,35 +738,39 @@ section.stacked-4 {
         }
 
         #header {
-          display: inline-block;
+        display: block !important;
         }
 
         #header .grid-4 {
-          width: 50%;
+          width: 100%;
           float: left;
+          display: block !important;
         }
 
         #header .grid-2 {
-          width: 50%;
+          width: 100%;
           float: left;
+          display: block !important;
         }
 
         #header .grid-2 .grid-2 {
           width: 100%;
           float: left;
+          display: block !important;
         }
 
         #header .logo {
           float: right;
           text-align: right;
-          display: table;
+          display: block;
+          width: 100%;
         }
 
         #header .logo img{
           float: right;
           position: absolute;
           right: var(--body-margin);
-          height: 85%;
+          height: 100%;
         }
 
         .shell {
@@ -779,5 +789,27 @@ section.stacked-4 {
                 width: 100% !important;
               }
 
+
+
+        .grid-4.featured .bottom > h4 > span{
+          display: block !important;
+          visibility: hidden !important;
+          line-height: 0;
+        }
+
+        .defintion {
+          visibility: hidden;
+          display: none;
+          height: 0px;
+        }
+
+        .definition-marquee {
+          display: block;
+          visibility: visible;
+          background: #000;
+          color: #fff;
+          height: calc(var(--footer-height) - var(--body-margin)/2);
+          line-height: calc(var(--footer-height) - var(--body-margin)/2);
+        }
 
 }
