@@ -149,6 +149,11 @@ h3, section .grid-2 p {
   letter-spacing: -.5px;
 }
 
+
+        .top h3 {
+          margin: 0px !important;
+        }
+
         section .grid-2 p a {
             /* text-decoration: underline; */
             font-weight: bold;
@@ -497,9 +502,11 @@ select#allSections:focus {
         margin-bottom: var(--program-margin);
       }
 
-      .participate .featured-text .title{
-        margin-bottom: var(--body-margin);
+      .participate .featured-text .bottom{
+        margin-top: var(--body-margin);
       }
+
+
 
 
 
