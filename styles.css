@@ -775,7 +775,7 @@ section.stacked-4 {
 
         .shell {
             width: calc(100vw - calc(var(--body-margin)));
-            height: calc(100% - var(--footer-height) - var(--header-height));
+            height: calc(100vh - var(--footer-height) - var(--header-height));
             margin: var(--header-height) auto auto auto;
         }
 

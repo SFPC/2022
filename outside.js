@@ -1,3 +1,5 @@
+$(window).height();
+
 var poeticcomputation = [
        "Poetic computation is a relational practice organized around communal study."
      , "hPoetic computation is an act of resistance against utilitarian notions of progress and efficiency."
