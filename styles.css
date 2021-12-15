@@ -217,6 +217,7 @@ img {
     margin: var(--header-height) auto auto auto;
     overflow: scroll;
     border-radius: var(--border-rad);
+    position: fixed;
 }
 
 a {
