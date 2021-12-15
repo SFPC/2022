@@ -214,12 +214,14 @@ img {
     z-index: 11;
     width: calc(100vw - var(--body-margin));
     height: calc(100vh - var(--footer-height) - var(--header-height));
-    margin: var(--header-height) auto auto auto;
+    /* margin: var(--header-height) auto auto auto; */
+    margin: 0;
     overflow: scroll;
     border-radius: var(--border-rad);
     position: fixed;
     left: calc(var(--body-margin)/2);
     bottom: var(--footer-height);
+    top: var(--header-height);
 }
 
 
@@ -794,7 +796,7 @@ section.stacked-4 {
         .shell {
             width: calc(100vw - calc(var(--body-margin)));
             height: calc(100vh - var(--footer-height) - var(--header-height));
-            margin: var(--header-height) auto auto auto;
+            /* margin: var(--header-height) auto auto auto; */
         }
 
         section.stacked-4 .grid-1{
