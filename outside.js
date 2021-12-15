@@ -1,15 +1,5 @@
 $(window).height();
 
-var poeticcomputation = [
-       "Poetic computation is a relational practice organized around communal study."
-     , "hPoetic computation is an act of resistance against utilitarian notions of progress and efficiency."
-     , "Poetic computation begins with the interfacing between two or more beings."
-     , "Poetic computation engages the computer as a medium for critical and artistic expression."
-     , "Poetic computation is both an aesthetic and affective experience of code."
-     , "Poetic computation can’t be separated from its historical, political and social impact."
-     , "Poetic computation is when technology is used for critical thinking and aesthetic inquiry."
-  ];
-
 
 
 const modeStyles = document.getElementById('mode')
@@ -68,6 +58,21 @@ $(document).ready(function() {
   let mobileBrowser = checkMobile()
   if(mobileBrowser){
   }
+
+
+
+  var poeticcomputation = [
+         "Poetic computation is a relational practice organized around communal study."
+       , "Poetic computation is an act of resistance against utilitarian notions of progress and efficiency."
+       , "Poetic computation begins with the interfacing between two or more beings."
+       , "Poetic computation engages the computer as a medium for critical and artistic expression."
+       , "Poetic computation is both an aesthetic and affective experience of code."
+       , "Poetic computation can’t be separated from its historical, political and social impact."
+       , "Poetic computation is when technology is used for critical thinking and aesthetic inquiry."
+  ];
+
+  randDef = poeticcomputation[Math.floor( Math.random() * poeticcomputation.length )];
+  $('#definition').text(randDef);
 
 
 
