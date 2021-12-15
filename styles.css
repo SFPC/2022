@@ -220,7 +220,7 @@ img {
     border-radius: var(--border-rad);
     position: fixed;
     left: calc(var(--body-margin)/2);
-    bottom: var(--footer-height);
+    /* bottom: var(--footer-height); */
     top: var(--header-height);
 }
 
