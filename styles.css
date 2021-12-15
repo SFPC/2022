@@ -275,6 +275,12 @@ a {
           width: 50%;
           display: flex;
           gap: var(--body-margin);
+          padding-left: calc(var(--body-margin)/2);
+          box-sizing: border-box;
+        }
+
+        #header .grid-2 .grid-2 {
+          padding-left: 0px !important;
         }
 
         #header .grid-4 {
@@ -369,7 +375,7 @@ section {
   margin-bottom: var(--text-margin);
   padding-bottom: var(--text-margin);
   border-bottom: 2px solid var(--text-color);
-  /* column-gap: calc(var(--text-margin)); */
+  column-gap: calc(var(--body-margin));
 }
 
         section .left, section .grid-2 {
