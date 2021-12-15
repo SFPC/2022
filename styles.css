@@ -733,6 +733,19 @@ section.stacked-4 {
       } */
 
 
+.closed img.left {
+    float: left;
+    margin: calc(var(--body-margin)/2) calc(var(--body-margin)*2) var(--body-margin) 0;
+    width: calc(25% - var(--body-margin));
+    /* border: 2px solid #fff; */
+    border-radius: var(--border-rad);
+}
+
+
+
+
+
+
 
 
 
@@ -850,6 +863,11 @@ section.stacked-4 {
 
         select#allSections {
           font-size: var(--small-text);
+        }
+
+        .closed img.left {
+            margin: calc(var(--body-margin)/2) calc(var(--body-margin)*3) var(--body-margin) 0;
+            width: calc(50% - var(--body-margin));
         }
 
 

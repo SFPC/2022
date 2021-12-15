@@ -33,7 +33,7 @@ select#allSections {
   color: var(--background);
 }
 
-.bio {
+.bio, img {
   -webkit-filter: grayscale(100%);
 }
 
