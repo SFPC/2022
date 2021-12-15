@@ -1,4 +1,10 @@
 :root {
+
+    --background: var(--spring-2022-background);
+    --text-color: var(--spring-2022-text);
+    --text-link: var(--spring-2022-link);
+    --box-shadow: rgba(0,0,0,.3);
+
     --spring-2022-background: #C8C8A7;
     --spring-2022-text: #000;
     --spring-2022-link: #777744;
@@ -13,12 +19,7 @@
 
     --codesocieties-2020-background: blueviolet;
     --codesocieties-2020-text: #fff;
-    --codesocieties-2020-link: #fff;
-
-    --background: var(--spring-2022-background);
-    --text-color: var(--spring-2022-text);
-    --text-link: var(--spring-2022-link);
-    --box-shadow: rgba(0,0,0,.3);
+    --codesocieties-2020-link: #c78fff;
 
 }
 
@@ -73,10 +74,11 @@ select#allSections {
   background-blend-mode: screen;
 }
 
-/*
-        .cocoon-2021.featured h4.type  {
-          color: var(--cocoon-2021-text) !important;
-        } */
+
+        .cocoon-2021 a:hover, .cocoon-2021.featured:hover h2 {
+          color: var(--cocoon-2021-link) !important;
+        }
+
 
 .codesocieties-2020 {
   background-color: var(--codesocieties-2020-background);
@@ -88,3 +90,7 @@ select#allSections {
   background-repeat: no-repeat;
   background-size: 100%;
 }
+
+        .codesocieties-2020 a:hover, .codesocieties-2020.featured:hover h2 {
+          color: var(--codesocieties-2020-link) !important;
+        }

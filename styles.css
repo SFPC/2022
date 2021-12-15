@@ -144,7 +144,9 @@ h1, p.large{
   o-transition: all .2s ease-out;
 }
 
-
+        .featured:hover .title, .title:hover {
+          color: var(--text-link);
+        }
 
 
 h2 {
@@ -442,7 +444,7 @@ select#allSections:focus {
 
         .home, .about, .closed, .blog, .people p{
             font-family: var(--main-font);
-            color: var(--text);
+            color: var(--text-color);
         }
 
 
@@ -608,6 +610,10 @@ h4.breadcrumb {
 
 .underline {
   text-decoration: underline !important;
+}
+
+p {
+  color: var(--text-color);
 }
 
 p a {
