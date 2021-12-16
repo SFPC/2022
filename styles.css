@@ -785,7 +785,7 @@ section.stacked-4 {
             overflow-y: hidden;
           }
 
-          .items {
+          .items, .items2 {
             position: relative;
             /* max-width: 100%; */
             width: auto !important;
@@ -802,7 +802,7 @@ section.stacked-4 {
             padding-top: calc(var(--body-margin)*2);
           }
 
-          .items.active {
+          .items.active, .items2.active {
             cursor: grabbing;
             cursor: -webkit-grabbing;
             transform: scale(0.98);
