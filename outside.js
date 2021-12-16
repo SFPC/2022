@@ -1,4 +1,9 @@
-$(window).height();
+document.addEventListener( 'DOMContentLoaded', function() {
+    var splide = new Splide( '.splide' );
+    splide.mount();
+  } );
+
+
 
 function resetHeight(){
     // reset the body height to that of the inner browser
@@ -79,6 +84,7 @@ $(document).ready(function() {
        , "Poetic computation is both an aesthetic and affective experience of code."
        , "Poetic computation can’t be separated from its historical, political and social impact."
        , "Poetic computation is when technology is used for critical thinking and aesthetic inquiry."
+       , "Poetic computation is a colorful theory of culpability."
   ];
 
   randDef = poeticcomputation[Math.floor( Math.random() * poeticcomputation.length )];
