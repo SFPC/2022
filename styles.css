@@ -844,6 +844,7 @@ section.stacked-4 {
             transform: scale(0.98);
           }
 
+
           figure {
             margin-block-start: 0;
             margin-block-end: 0;
@@ -923,14 +924,14 @@ section.stacked-4 {
             o-transition: all .2s ease-out;
           }
 
-          figure.item-first {
+           #carousel-images figure:first-child {
               width: calc(50vw - var(--body-margin)*2) !important;
               height: 50vh !important;
               display: inline-block;
               overflow: hidden;
           }
 
-          figure.item-first img {
+          #carousel-images figure:first-child img {
             height: 100%;
             width: 100%;
             -o-object-fit: cover;
@@ -950,7 +951,7 @@ section.stacked-4 {
           }
 
 
-          figure.item img:hover, figure.item-first:hover {
+          figure.item img:hover, #carousel-images figure:first-child:hover {
             box-shadow: 0px 0px 15px var(--box-shadow);
             /* transform: scale(0.98); */
           }
@@ -1100,9 +1101,13 @@ section.stacked-4 {
 
 
 
-        figure.item-first {
+        #carousel-images figure:first-child {
             width: calc(80vw - var(--body-margin)*2) !important;
             height: 30vh !important;
+        }
+
+        .test {
+          width: calc(80vw - var(--body-margin)*2);
         }
 
 
