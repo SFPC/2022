@@ -1,9 +1,6 @@
-document.addEventListener( 'DOMContentLoaded', function() {
-    var splide = new Splide( '.splide' );
-    splide.mount();
-  } );
 
 
+// MOBILE WINDOW SIZE RESET
 
 function resetHeight(){
     // reset the body height to that of the inner browser
@@ -16,17 +13,15 @@ resetHeight();
 
 
 
+// SIDE MODES
 
 const modeStyles = document.getElementById('mode')
 const storedTheme = localStorage.getItem('mode');
   if(storedTheme){
       modeStyles.href = storedTheme;
 }
-
-
 const themeToggle = document.getElementById('mode-toggle')
 const currentMode = document.getElementById('current-mode')
-
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -46,7 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 $(window).scroll(function(){
   var scrollTop = $(window).scrollTop();
-
 
 
 });
@@ -89,6 +83,46 @@ $(document).ready(function() {
 
   randDef = poeticcomputation[Math.floor( Math.random() * poeticcomputation.length )];
   $('#definition').text(randDef);
+
+
+  $(".testimonials").click(function() {
+      $(".participate-img").addClass('hide').removeClass('show').addClass('hide-test').removeClass('show-test');
+      $(".test").addClass('show-test').removeClass('hide-test');
+      $(".test-text").addClass('hide-test').removeClass('show-test');
+      $(".photos-text").addClass('show-test').removeClass('hide-test');
+      slider.scrollLeft = 0;
+      slide2.scrollLeft = 0;
+  });
+
+  $(".participate-photos").click(function() {
+      $(".participate-img").addClass('show').removeClass('hide').addClass('show-test').removeClass('hide-test');
+      $(".test").addClass('hide-test').removeClass('show-test');
+      $(".test-text").addClass('show-test').removeClass('hide-test');
+      $(".photos-text").addClass('hide-test').removeClass('show-test');
+      slider.scrollLeft = 0;
+      slide2.scrollLeft = 0;
+  });
+
+
+  $('.testimonials').on('touchstart', function(){
+    $(".participate-img").addClass('hide').removeClass('show').addClass('hide-test').removeClass('show-test');
+    $(".test").addClass('show-test').removeClass('hide-test');
+    $(".test-text").addClass('hide-test').removeClass('show-test');
+    $(".photos-text").addClass('show-test').removeClass('hide-test');
+    slider.scrollLeft = 0;
+    slide2.scrollLeft = 0;
+  });
+
+  $('.participate-photos').on('touchstart', function(){
+      $(".participate-img").addClass('show').removeClass('hide').addClass('show-test').removeClass('hide-test');
+      $(".test").addClass('hide-test').removeClass('show-test');
+      $(".test-text").addClass('show-test').removeClass('hide-test');
+      $(".photos-text").addClass('hide-test').removeClass('show-test');
+      slider.scrollLeft = 0;
+      slide2.scrollLeft = 0;
+  });
+
+
 
 
 
