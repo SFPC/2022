@@ -15,9 +15,6 @@
     --large-line-height: var(--main-large-line-height);
 
     /* default font */
-    --main-title-font: 'Hershey', sans-serif;
-    --main-body-font: 'Hershey', sans-serif;
-    --main-special-font: Courier, sans-serif;
     --main-small-text: calc(14px + 0.1vw);
     --main-small-line-height: 1;
     --main-medium-text: calc(20px + 0.34vw);
@@ -25,15 +22,26 @@
     --main-large-text: calc(24px + 2vw);
     --main-large-line-height: 1;
 
+
+    --main-title-font: 'Hershey', sans-serif;
+    --main-header-font: 'Hershey', sans-serif;
+    --main-body-font: 'Hershey', sans-serif;
+    --main-special-font: Courier, sans-serif;
+
     --fallwinter-2122-title-font: 'Alte', sans-serif;
+    --fallwinter-2122-header-font: 'Alte', sans-serif;
     --fallwinter-2122-body-font: 'Alte', sans-serif;
     --fallwinter-2122-special-font: 'Alte', sans-serif;
 
-
-
-
     --cocoon-2021-title-font: 'Self Modern', serif;
+    --cocoon-2021-header-font: 'Self Modern', serif;
+    --cocoon-2021-body-font: 'Self Modern', serif;
+    --cocoon-2021-special-font: 'Self Modern', serif;
+
     --codesocieties-2020-title-font: 'Violet', sans-serif;
+    --codesocieties-2020-header-font: 'Violet', sans-serif;
+    --codesocieties-2020-body-font: 'Violet', sans-serif;
+    --codesocieties-2020-special-font: 'Violet', sans-serif;
 
 
 
@@ -104,8 +112,6 @@
           font-family: var(--cocoon-2021-title-font);
           font-style: italic;
           font-weight: bold !important;
-          ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
-          filter: progid: DXImageTransform.Microsoft.BasicImage(rotation=2);
           line-height: 1;
           color: transparent;
           color: transparent;
@@ -912,7 +918,7 @@ section.stacked-4 {
           }
 
           figure.item-first {
-              width: calc(50vw - var(--body-margin)) !important;
+              width: calc(50vw - var(--body-margin)*2) !important;
               height: 50vh !important;
               display: inline-block;
               overflow: hidden;
@@ -1087,31 +1093,17 @@ section.stacked-4 {
         }
 
 
-        figure.item img {
-          height: 30vh;
-          width: auto !important;
-        }
-
-        /* figure.item-first {
-          height: 30vh;
-          width: 80vw;
-        } */
 
         figure.item-first {
-            width: auto !important;
+            width: calc(80vw - var(--body-margin)*2) !important;
             height: 30vh !important;
-            display: inline-block;
-            overflow: hidden;
         }
 
-        figure.item-first img {
-          height: 100%;
-          width: 100%;
+
+        figure.item img {
+          max-height: 30vh;
         }
 
-        .test {
-          width: 80vw !important;
-        }
 
 
 
