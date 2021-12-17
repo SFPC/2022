@@ -15,7 +15,9 @@
     --large-line-height: var(--main-large-line-height);
 
     /* default font */
-    --main-font: 'Hershey', sans-serif;
+    --main-title-font: 'Hershey', sans-serif;
+    --main-body-font: 'Hershey', sans-serif;
+    --main-special-font: Courier, sans-serif;
     --main-small-text: calc(14px + 0.1vw);
     --main-small-line-height: 1;
     --main-medium-text: calc(20px + 0.34vw);
@@ -24,6 +26,12 @@
     --main-large-line-height: 1;
 
     --fallwinter-2122-title-font: 'Alte', sans-serif;
+    --fallwinter-2122-body-font: 'Alte', sans-serif;
+    --fallwinter-2122-special-font: 'Alte', sans-serif;
+
+
+
+
     --cocoon-2021-title-font: 'Self Modern', serif;
     --codesocieties-2020-title-font: 'Violet', sans-serif;
 
@@ -127,7 +135,7 @@ html {
 body {
     background-color: #000;
     margin: 0;
-    font: var(--main-font);
+    font: var(--main-title-font);
 }
 
 h1,
@@ -200,7 +208,7 @@ h3, section .grid-2 p, .test {
 h4, .roles {
   font-size: var(--small-text);
   font-weight: bold;
-  font-family: var(--main-font);
+  font-family: var(--main-title-font);
   letter-spacing: 0px;
 }
 
@@ -214,7 +222,7 @@ h4, .roles {
 h5 {
   font-size: var(--small-text);
   font-weight: normal;
-  font-family: var(--main-font);
+  font-family: var(--main-title-font);
 }
 
 
@@ -281,7 +289,7 @@ a {
     z-index: 10000;
     background: #000;
     color: #fff;
-    font-family: var(--main-font);
+    font-family: var(--main-title-font);
     font-weight: normal;
     font-size: var(--small-text);
     line-height: 1.25;
@@ -358,7 +366,7 @@ a {
 
         #footer .mode {
           color: #fff;
-          font-family: var(--main-font);
+          font-family: var(--main-title-font);
           font-weight: normal;
           font-size: var(--small-text);
           line-height: var(--footer-height);
@@ -439,7 +447,7 @@ select#allSections {
   cursor: pointer;
   appearance: none;
   background: rgba(255,255,255,.8);
-  font-family: var(--main-font);
+  font-family: var(--main-title-font);
   font-weight: bold;
   font-size: var(--medium-text);
   /* color: var(--text-color); */
@@ -475,7 +483,7 @@ select#allSections:focus {
 
 
         .home, .about, .closed, .blog, .people p{
-            font-family: var(--main-font);
+            font-family: var(--main-title-font);
             color: var(--text-color);
         }
 
@@ -504,7 +512,7 @@ select#allSections:focus {
 .featured {
   box-sizing: border-box;
   border-radius: var(--border-rad);
-  font-family: var(--main-font);
+  font-family: var(--main-title-font);
   min-height: 20vh;
   padding: var(--program-margin);
   cursor: pointer;
@@ -807,7 +815,7 @@ section.stacked-4 {
             overflow-y: hidden;
           }
 
-          .items, .items2 {
+          .carousel-items {
             position: relative;
             /* max-width: 100%; */
             width: auto !important;
@@ -824,7 +832,7 @@ section.stacked-4 {
             padding-top: calc(var(--body-margin)*2);
           }
 
-          .items.active, .items2.active {
+          .carousel-items.active {
             cursor: grabbing;
             cursor: -webkit-grabbing;
             transform: scale(0.98);
@@ -866,7 +874,13 @@ section.stacked-4 {
 
           .show-test {
             display: inline-block !important;
+            /* float: left; */
           }
+
+          .photos-text, .test-text {
+            float: left;
+          }
+
 
           .test h4:before {
             content: '—'
@@ -881,9 +895,16 @@ section.stacked-4 {
             display: inline;
           }
 
-          .participate-content figure {
+          .carousel-content figure {
             border-radius: var(--border-rad);
             margin-right:calc(var(--body-margin)/2);
+            transition: all .2s ease-out;
+            -moz-transition: all .2s ease-out;
+            ms-transition: all .2s ease-out;
+            o-transition: all .2s ease-out;
+          }
+
+          .test, figure.item img:hover, .item-first:hover {
             transition: all .2s ease-out;
             -moz-transition: all .2s ease-out;
             ms-transition: all .2s ease-out;
