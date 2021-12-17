@@ -88,8 +88,8 @@ $(document).ready(function() {
   $(".testimonials").click(function() {
       $(".participate-img").addClass('hide').removeClass('show').addClass('hide-test').removeClass('show-test');
       $(".test").addClass('show-test').removeClass('hide-test');
-      $(".test-text").addClass('hide-test').removeClass('show-test');
-      $(".photos-text").addClass('show-test').removeClass('hide-test');
+      $("#test-text").addClass('hide-text');
+      $("#photos-text").removeClass('hide-text');
       slider.scrollLeft = 0;
       slider2.scrollLeft = 0;
       slider3.scrollLeft = 0;
@@ -98,8 +98,8 @@ $(document).ready(function() {
   $(".participate-photos").click(function() {
       $(".participate-img").addClass('show').removeClass('hide').addClass('show-test').removeClass('hide-test');
       $(".test").addClass('hide-test').removeClass('show-test');
-      $(".test-text").addClass('show-test').removeClass('hide-test');
-      $(".photos-text").addClass('hide-test').removeClass('show-test');
+      $("#test-text").removeClass('hide-text');
+      $("#photos-text").addClass('hide-text');
       slider.scrollLeft = 0;
       slider2.scrollLeft = 0;
       slider3.scrollLeft = 0;

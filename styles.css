@@ -884,6 +884,16 @@ section.stacked-4 {
           }
 
           .photos-text, .test-text {
+            float: left !important;
+          }
+
+          .show-text {
+            display: inline;
+            float: left;
+          }
+
+          .hide-text {
+            display: none;
             float: left;
           }
 
@@ -895,10 +905,6 @@ section.stacked-4 {
           .test h4 {
             display: block;
             margin-top: var(--program-margin);
-          }
-
-          .test-text, .photos-text {
-            display: inline;
           }
 
           .carousel-content figure {
