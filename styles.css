@@ -155,11 +155,18 @@ li {
     margin: 0;
 }
 
-h1, p.large{
-  font-size: var(--large-text) !important;
-  font-weight: lighter;
-  /* margin-bottom: var(--text-margin); */
+
+h1 {
+  /* -ms-transform: rotate(0deg) !important;
+    -webkit-transform: rotate(0deg) !important;
+    transform: rotate(0deg) !important; */
 }
+
+        h1, p.large{
+          font-size: var(--large-text) !important;
+          font-weight: lighter;
+          /* margin-bottom: var(--text-margin); */
+        }
 
 .session .title{
   font-size: var(--large-text) !important;
@@ -224,6 +231,14 @@ h4, .roles {
           /* margin-bottom: var(--body-margin); */
         }
 
+        h4 a {
+          color: var(--text-color);
+        }
+
+        h4 a:hover {
+          color: var(--text-link);
+        }
+
 
 h5 {
   font-size: var(--small-text);
@@ -233,6 +248,13 @@ h5 {
 
 
 
+h6 {
+  font-family: var(--main-special-font);
+  font-size: var(--medium-text);
+  line-height: var(--medium-line-height);
+  margin-bottom: 0;
+  font-weight: lighter;
+}
 
 
 img {
@@ -1003,6 +1025,12 @@ section.stacked-4 {
         section {
           display: block;
         }
+
+
+        section .grid-2 h1 {
+          margin-bottom: calc(var(--text-margin)/2);
+        }
+
         section .grid-2{
           width: 100%;
         }

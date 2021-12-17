@@ -1,4 +1,14 @@
 
+(function($) {
+$( document ).ready(function() {
+    $('h1').each(function( index ) {
+        // rotation degree between -5 and 5
+        var a = Math.random() * 10 - 5;
+        $(this).css('transform', 'rotate(' + a + 'deg)');})
+    });
+})(jQuery);
+
+
 
 // MOBILE WINDOW SIZE RESET
 
@@ -93,6 +103,12 @@ $(document).ready(function() {
       slider.scrollLeft = 0;
       slider2.scrollLeft = 0;
       slider3.scrollLeft = 0;
+
+      document.getElementById('participate-archive').scrollIntoView({
+        block: 'start',
+        behavior: 'smooth',
+      });
+
   });
 
   $(".participate-photos").click(function() {
@@ -103,6 +119,11 @@ $(document).ready(function() {
       slider.scrollLeft = 0;
       slider2.scrollLeft = 0;
       slider3.scrollLeft = 0;
+
+      document.getElementById('participate-archive').scrollIntoView({
+        block: 'start',
+        behavior: 'smooth',
+      });
   });
 
 
