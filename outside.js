@@ -48,20 +48,23 @@ resetHeight();
 
 $(window).scroll(function(){
   var scrollTop = $(window).scrollTop();
+});
 
-
+$(".more-about-cost").click(function() {
+  document.getElementById('section-cost').scrollIntoView({
+    block: 'start',
+    behavior: 'smooth',
+  });
 });
 
 
-
 function sectionJump(value){
-  // var top = document.getElementById(value).offsetTop + 200;
-  // window.scrollTo(0, top);
 	document.getElementById(value).scrollIntoView({
     block: 'start',
     behavior: 'smooth',
   });
 }
+
 
 
 $(window).on("load", function() {
@@ -210,6 +213,8 @@ $(".top").click(function() {
 
     return false;
 });
+
+
 
 
 

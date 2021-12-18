@@ -11,7 +11,7 @@
 
     --spring-2022-background: #dedede;
     --spring-2022-text: #0F2BD4;
-    --spring-2022-link: #000;
+    --spring-2022-link: blueviolet;
 
     --fallwinter-2122-background: #fff;
     --fallwinter-2122-text: #000;
@@ -34,7 +34,7 @@ select#allSections {
 }
 
 
-.test {
+.test, .block-text {
   border-color: var(--text-link);
 }
 
