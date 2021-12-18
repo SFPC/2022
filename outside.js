@@ -10,6 +10,24 @@ $( document ).ready(function() {
     });
 })(jQuery);
 
+(function($) {
+$( document ).ready(function() {
+    $('.mobile-menu').each(function( index ) {
+        // rotation degree between -5 and 5
+        var a = Math.random() * 10 - 8;
+        $(this).css('transform', 'rotate(' + a + 'deg)');})
+    });
+})(jQuery);
+
+(function($) {
+$( document ).ready(function() {
+    $('.mobile-menu-content h2').each(function( index ) {
+        // rotation degree between -5 and 5
+        var a = Math.random() * 10 - 5;
+        $(this).css('transform', 'rotate(' + a + 'deg)');})
+    });
+})(jQuery);
+
 
 
 // MOBILE WINDOW SIZE RESET
@@ -110,6 +128,13 @@ $(document).ready(function() {
       // $(".shell").addClass('shell-halfsize').removeClass('shell-fullsize');
       $(".shell").toggleClass('shell-halfsize');
       $(".shell").toggleClass('full-halfsize');
+      $(".mobile-menu-content").toggleClass('mobile-menu-content-show');
+
+      if ($(".mobile-menu").text() == "Menu") {
+        $(".mobile-menu").text("Close");
+    } else {
+        $(".mobile-menu").text("Menu");
+    };
 
   });
 
