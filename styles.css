@@ -1120,11 +1120,11 @@ section.stacked-4 {
         }
 
         section ul {
-            padding-inline-start: calc(var(--body-margin)*3);
+            padding-inline-start: calc(var(--body-margin)*6);
         }
 
         section ul ul  {
-            padding-inline-start: calc(var(--body-margin)*3 * -1);
+            padding-inline-start: calc(var(--body-margin)*6 * -1);
         }
 
         section .grid-2 ul ,   section .grid-2 ul ul{
@@ -1144,6 +1144,23 @@ section.stacked-4 {
         section .grid-2{
           width: 100%;
         }
+
+        .class-details .details .labels {
+          width: calc(50% - var(--body-margin)/2);
+            line-height: calc(var(--medium-line-height));
+        }
+
+        .class-details {
+          display: flex;
+            line-height: calc(var(--medium-line-height)*1.2);
+            row-gap: calc(var(--body-margin)*2);
+        }
+
+        .more-about-cost {
+          display: block
+        }
+
+
         .grid-1 {
           display: block;
         }
