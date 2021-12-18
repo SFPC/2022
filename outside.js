@@ -106,6 +106,14 @@ $(document).ready(function() {
   });
 
 
+  $(".mobile-menu").click(function() {
+      // $(".shell").addClass('shell-halfsize').removeClass('shell-fullsize');
+      $(".shell").toggleClass('shell-halfsize');
+      $(".shell").toggleClass('full-halfsize');
+
+  });
+
+
   // $('.testimonials').on('touchstart', function(){
   //   $(".participate-img").addClass('hide').removeClass('show').addClass('hide-test').removeClass('show-test');
   //   $(".test").addClass('show-test').removeClass('hide-test');

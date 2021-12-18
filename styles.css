@@ -273,16 +273,24 @@ img {
     position: relative;
     z-index: 11;
     width: calc(100vw - var(--body-margin));
-    height: calc(100% - var(--footer-height) - var(--header-height));
-    /* margin: var(--header-height) auto auto auto; */
     margin: 0;
     overflow: scroll;
     border-radius: var(--border-rad);
     position: fixed;
     left: calc(var(--body-margin)/2);
     /* bottom: var(--footer-height); */
-    top: var(--header-height);
+    transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    ms-transition: all .2s linear;
+    o-transition: all .2s linear;
 }
+
+.shell-fullsize {
+  height: calc(100% - var(--footer-height) - var(--header-height));
+  top: var(--header-height);
+  bottom: auto;
+}
+
 
 
 .hide {
@@ -1089,8 +1097,17 @@ section.stacked-4 {
 
         .shell {
             width: calc(100vw - calc(var(--body-margin)));
-            height: calc(100vh - var(--footer-height) - var(--header-height));
             /* margin: var(--header-height) auto auto auto; */
+        }
+
+        .shell-fullsize {
+          height: calc(100% - var(--footer-height) - var(--header-height));
+          top: var(--header-height);
+        }
+
+        .shell-halfsize {
+          height: calc(80% - var(--footer-height) - var(--header-height));
+          top: calc(var(--header-height) + 20%) ;
         }
 
         section.stacked-4 .grid-1{
