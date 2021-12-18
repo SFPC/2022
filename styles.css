@@ -747,6 +747,16 @@ p a {
           margin-top: calc(var(--body-margin));
         }
 
+        .stewards .grid-2{
+          width: 50%;
+          /* overflow: hidden; */
+          overflow-wrap: break-word;
+          /* word-break: break-word; */
+          -webkit-hyphens: auto;
+         -moz-hyphens: auto;
+              hyphens: auto;
+        }
+
 .intro .bio {
   display: inline-block;
   vertical-align: bottom;
@@ -1212,6 +1222,13 @@ section.stacked-4 {
         figure.item img {
           max-height: 30vh;
         }
+
+        .stewards, .stewards .grid-2{
+          display: block;
+          width: 100%;
+        }
+
+
 
 
 
