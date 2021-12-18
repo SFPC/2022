@@ -1,4 +1,6 @@
 
+// ROTATE HEADERS
+
 (function($) {
 $( document ).ready(function() {
     $('h1').each(function( index ) {

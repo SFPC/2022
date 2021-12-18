@@ -186,7 +186,7 @@ h2 {
   /* font-weight: bold; */
 }
 
-h3, section .grid-2 p, .test {
+h3, section .grid-2 p, .block-text {
   font-size: var(--medium-text);
   font-weight: lighter;
   line-height: var(--medium-line-height);
@@ -228,6 +228,7 @@ h4, .roles {
         .roles {
           display: block;
           margin-top: calc(var(--body-margin)/20);
+          margin-bottom: calc(var(--body-margin)/20);
           /* margin-bottom: var(--body-margin); */
         }
 
@@ -253,6 +254,7 @@ h6 {
   font-size: var(--medium-text);
   line-height: var(--medium-line-height);
   margin-bottom: 0;
+  margin-top: 0;
   font-weight: lighter;
 }
 
@@ -879,7 +881,7 @@ section.stacked-4 {
             width: auto !important;
           }
 
-          .test {
+          .block-text {
             vertical-align: top;
             /* width: auto; */
             /* max-width: calc(25% - var(--body-margin)); */
@@ -893,7 +895,7 @@ section.stacked-4 {
             font-family: courier;
           }
 
-          .test:hover {
+          .block-text:hover {
             box-shadow: 0px 0px 15px var(--text-link);
           }
 
@@ -906,7 +908,7 @@ section.stacked-4 {
             /* float: left; */
           }
 
-          .photos-text, .test-text {
+          .photos-text, .block-text-text {
             float: left !important;
           }
 
@@ -921,11 +923,11 @@ section.stacked-4 {
           }
 
 
-          .test h4:before {
-            content: '—'
+          .block-text h4:before {
+            content: '— '
           }
 
-          .test h4 {
+          .block-text h4 {
             display: block;
             margin-top: var(--program-margin);
           }
@@ -939,7 +941,7 @@ section.stacked-4 {
             o-transition: all .2s ease-out;
           }
 
-          .test, figure.item img:hover, .item-first:hover {
+          .block-text, figure.item img:hover, .item-first:hover {
             transition: all .2s ease-out;
             -moz-transition: all .2s ease-out;
             ms-transition: all .2s ease-out;
@@ -979,7 +981,9 @@ section.stacked-4 {
           }
 
 
-
+.mobile-menu {
+  display: none;
+}
 
 
 
@@ -1053,15 +1057,15 @@ section.stacked-4 {
         }
 
         #header .grid-2 {
-          width: 100%;
+          width: 50%;
           float: left;
-          display: block !important;
+          display: inline-block !important;
         }
 
         #header .grid-2 .grid-2 {
-          width: 100%;
+          width: 50%;
           float: left;
-          display: block !important;
+          display: inline-block !important;
         }
 
         #header .logo {
@@ -1075,7 +1079,12 @@ section.stacked-4 {
           float: right;
           position: absolute;
           right: var(--body-margin);
-          height: 100%;
+          height: calc(100% - var(--footer-height) - var(--body-margin)/2);
+        }
+
+        .mobile-menu {
+          display: inline-block;
+          cursor: pointer;
         }
 
         .shell {
@@ -1134,7 +1143,7 @@ section.stacked-4 {
             height: 30vh !important;
         }
 
-        .test {
+        .block-text {
           width: calc(80vw - var(--body-margin)*2);
         }
 
