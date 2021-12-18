@@ -273,7 +273,7 @@ img {
     position: relative;
     z-index: 11;
     width: calc(100vw - var(--body-margin));
-    height: calc(100vh - var(--footer-height) - var(--header-height));
+    height: calc(100% - var(--footer-height) - var(--header-height));
     /* margin: var(--header-height) auto auto auto; */
     margin: 0;
     overflow: scroll;
@@ -370,14 +370,14 @@ a {
           float: right;
         }
 
-        .logo {
+        .logo, .mobile-menu {
           transition: all .2s ease-out;
           -moz-transition: all .2s ease-out;
           ms-transition: all .2s ease-out;
           o-transition: all .2s ease-out;
         }
 
-        .logo:hover {
+        .logo:hover, .mobile-menu:hover {
           opacity: .6;
         }
 

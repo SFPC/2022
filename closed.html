@@ -19,7 +19,7 @@
     <meta property="twitter:description" content="The School for Poetic Computation is changing. This summer, we are making a temporary space together: a COCOON. We invite you into our collective studies as we work towards an experimental curriculum that can grow and transform over time.">
     <meta property="twitter:image" content="http://sfpc.io/cocoon/sfpc-cocoon.jpg">
     <link href="styles.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="crt.css" />
+    <link rel="stylesheet" type="text/css" href="crt.css">
     <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
 
     <script src="jquery-3.6.0.min.js"></script>
@@ -32,12 +32,13 @@
   <div id="header">
 
     <div class="definition-marquee">
-      <marquee>Poetic computation is an act of resistance against utilitarian notions of progress and efficiency.</marquee>
+      <marquee id="marquee-definition"></marquee>
     </div>
 
     <div class="grid-2">
-      <div class="grid-2 defintion">
-        (this will randomize) Poetic computation is an act of resistance against utilitarian notions of progress and efficiency.
+      <div class="grid-2">
+        <span id="definition" class="defintion"></span>
+        <nav class="mobile-menu"><h1>Menu</h1></nav>
       </div>
     </div>
 
