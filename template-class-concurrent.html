@@ -24,6 +24,21 @@
 
     <script src="jquery-3.6.0.min.js"></script>
 
+    <script>
+      (function (s, e, n, d, er) {
+        s['Sender'] = er;
+        s[er] = s[er] || function () {
+          (s[er].q = s[er].q || []).push(arguments)
+        }, s[er].l = 1 * new Date();
+        var a = e.createElement(n),
+            m = e.getElementsByTagName(n)[0];
+        a.async = 1;
+        a.src = d;
+        m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
+      sender('2574a565750725')
+    </script>
+
 
 </head>
 
@@ -157,7 +172,7 @@
                       </div>
                       <div class="details">
                         <div class="labels">Cost </div>
-                        <div class="labels-info"><span id="cost">$1200</span> <a href="#section-cost" class="more-about-cost">learn more...</a></div>
+                        <div class="labels-info"><span id="cost">$1200</span> Scholarships available <a class="more-about-cost">learn more...</a></div>
                       </div>
                       <div class="details">
                         <div class="labels">Deadline </div>
@@ -391,7 +406,7 @@
 
                     <div class="grid-2">
                       <p>
-                            <span id="cost">$1200</span> + Withfriends payment processing fees for five weekly classes. Upon payment, your space in the session will be reserved.
+                            <span id="cost">$1200</span> + Withfriends payment processing fees for <span id="number-classes">10</span> classes. Upon payment, your space in the class will be reserved.
                               We offer scholarships for those who cannot pay full tuition. Read more about scholarships below.
 
                         </p>
@@ -410,10 +425,10 @@
 
                     <div class="grid-2">
                       <p>
-                            If you can’t pay full tuition, we really still want you to apply. Our application will ask you how much you can pay. We will offer up to  4 subsidized positions in all of our classes, once each one has enough students enrolled that we’re able to do so. We have also started a <a href="https://withfriends.co/school_for_poetic_computation/join">scholarship fund</a>, and we will be offering additional scholarships as community members
-                            <a href="https://withfriends.co/school_for_poetic_computation/join">redistribute their wealth through SFPC</a>. We direct scholarship funds towards students who are Black, Indigenous, racialized, gendered, disabled, Queer, trans, underrepresented, oppressed and minoritized.
+                            If you can’t pay full tuition, we really still want you to apply. Our application will ask you how much you can pay. We will offer up subsidized positions in all of our classes, once each one has enough participants enrolled that we’re able to do so. We have also started a <a href="https://withfriends.co/school_for_poetic_computation/join">scholarship fund</a>, and we will be offering additional scholarships as community members
+                            <a href="https://withfriends.co/school_for_poetic_computation/join">redistribute their wealth through SFPC</a>. We direct scholarship funds towards participants who are Black, Indigenous, racialized, gendered, disabled, Queer, trans, underrepresented, oppressed and minoritized.
                           <br><br>
-                            Right now, tuition is SFPC’s main source of income, and that is a problem. It means that we can only pay teachers, pay for space, and organize events and classes when students pay full tuition to attend. Tuition is a huge barrier to entry into the SFPC community, and it disproportionately limits Black students, indigenous students, queer and trans students, and other people who are marginalized, from participating. Scholarships are not a long term solution for us, but in the short and medium term we hope to offer them more while we work towards transforming SFPC’s financial model.
+                            Right now, tuition is SFPC’s main source of income, and that is a problem. It means that we can only pay teachers, pay for space, and organize events and classes when participants pay full tuition to attend. Tuition is a huge barrier to entry into the SFPC community, and it disproportionately limits Black participants, indigenous participants, queer and trans participants, and other people who are marginalized, from participating. Scholarships are not a long term solution for us, but in the short and medium term we hope to offer them more while we work towards transforming SFPC’s financial model.
                         </p>
                         <p><a href="#">more about scholarships...</a>
                           </p>
@@ -445,9 +460,9 @@
 
                     <div class="grid-2">
                       <ul id="expectations-list">
-                        <li>Yes, we can give you 100% refund up to 10 days before session starts
-                        <li>50% refund after 10 days, until the first day of the session
-                        <li>No refunds can be given after the first day of the session
+                        <li>Yes, we can give you 100% refund up to 10 days before class starts
+                        <li>50% refund after 10 days, until the first day of the class
+                        <li>No refunds can be given after the first day of the class
                         </ul>
                     </div>
                 </section>

@@ -1,10 +1,86 @@
+let participateImages = [];
+let participateImagesFeatured = [];
+let spaceImages = [];
+let spaceImagesFeatured = [];
+
+for (let i = 0; i <= 3; i += 1) {
+    participateImagesFeatured.push("images/community/featured/" + i.toString() + ".jpg");
+}
+
+for (let i = 0; i <= 2; i += 1) {
+    spaceImagesFeatured.push("images/space/featured/" + i.toString() + ".jpg");
+}
+
+var pi1 = participateImagesFeatured[Math.floor( Math.random() * participateImagesFeatured.length )];
+var si1 = spaceImagesFeatured[Math.floor( Math.random() * spaceImagesFeatured.length )];
+
+for (var a=[],i=0;i<71;++i) a[i]=i; //community images
+for (var b=[],i=0;i<11;++i) b[i]=i; //space images
+
+function shuffle(array) {
+  var tmp, current, top = array.length;
+  if(top) while(--top) {
+    current = Math.floor(Math.random() * (top + 1));
+    tmp = array[current];
+    array[current] = array[top];
+    array[top] = tmp;
+  }
+  return array;
+}
+
+a = shuffle(a);
+b = shuffle(b);
+
+
+
+for (let i = 0; i <= 9; i += 1) {
+    spaceImages.push("images/space/" + b[i].toString() + ".jpg");
+}
+
+for (let i = 0; i <= 19; i += 1) {
+    participateImages.push("images/community/" + a[i].toString() + ".jpg");
+}
+
+
+$(".pi1 img").attr("src", pi1);
+$(".pi2 img").attr("src", participateImages[2]);
+$(".pi3 img").attr("src", participateImages[3]);
+$(".pi4 img").attr("src", participateImages[4]);
+$(".pi5 img").attr("src", participateImages[5]);
+$(".pi6 img").attr("src", participateImages[6]);
+$(".pi7 img").attr("src", participateImages[7]);
+$(".pi8 img").attr("src", participateImages[8]);
+$(".pi9 img").attr("src", participateImages[9]);
+$(".pi10 img").attr("src", participateImages[10]);
+$(".pi11 img").attr("src", participateImages[11]);
+$(".pi12 img").attr("src", participateImages[12]);
+$(".pi13 img").attr("src", participateImages[13]);
+$(".pi14 img").attr("src", participateImages[14]);
+$(".pi15 img").attr("src", participateImages[15]);
+$(".pi16 img").attr("src", participateImages[16]);
+$(".pi17 img").attr("src", participateImages[17]);
+$(".pi18 img").attr("src", participateImages[18]);
+$(".pi19 img").attr("src", participateImages[19]);
+
+$(".si1 img").attr("src", si1);
+$(".si2 img").attr("src", spaceImages[2]);
+$(".si3 img").attr("src", spaceImages[3]);
+$(".si4 img").attr("src", spaceImages[4]);
+$(".si5 img").attr("src", spaceImages[5]);
+$(".si6 img").attr("src", spaceImages[6]);
+$(".si7 img").attr("src", spaceImages[7]);
+$(".si8 img").attr("src", spaceImages[8]);
+$(".si9 img").attr("src", spaceImages[9]);
+$(".si10 img").attr("src", spaceImages[10]);
+
+
+
 
 // ROTATE HEADERS
 
 (function($) {
 $( document ).ready(function() {
     $('h1').each(function( index ) {
-        // rotation degree between -5 and 5
         var a = Math.random() * 10 - 5;
         $(this).css('transform', 'rotate(' + a + 'deg)');})
     });
@@ -13,7 +89,6 @@ $( document ).ready(function() {
 (function($) {
 $( document ).ready(function() {
     $('.mobile-menu').each(function( index ) {
-        // rotation degree between -5 and 5
         var a = Math.random() * 10 - 8;
         $(this).css('transform', 'rotate(' + a + 'deg)');})
     });
@@ -22,7 +97,6 @@ $( document ).ready(function() {
 (function($) {
 $( document ).ready(function() {
     $('.mobile-menu-content h2').each(function( index ) {
-        // rotation degree between -5 and 5
         var a = Math.random() * 10 - 5;
         $(this).css('transform', 'rotate(' + a + 'deg)');})
     });

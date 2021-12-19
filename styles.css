@@ -1080,6 +1080,34 @@ section.stacked-4 {
             font-family: var(--main-special-font);
         }
 
+        .more-about-cost {
+          cursor: pointer;
+        }
+
+
+
+.sender-subs-embed-form-dB8loa .sender-form-box {
+    width: 100%;
+    background-color: none !important;
+    border-color: none !important;
+    padding: 0px !important;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.sender-form-box {
+    width: 0px !important;
+    padding: 0px !important;
+    border-style: solid;
+}
+
+.sender-form-link {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 0px;
+    text-decoration: none;
+    display: none !important;
+  }
 
 
 
@@ -1158,7 +1186,7 @@ section.stacked-4 {
         }
 
         .more-about-cost {
-          display: block
+          display: block;
         }
 
 
