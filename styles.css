@@ -617,7 +617,9 @@ select#allSections:focus {
 
 
       .grid-2.featured h4.type {
-        display: none;
+        /* display: none; */
+          font-size: var(--small-text);
+          font-weight: bold;
       }
 
       .type {
@@ -635,8 +637,8 @@ select#allSections:focus {
       }
 
       .grid-2 .featured-text {
-        align-self: flex-end;
         flex-direction: column;
+        justify-content: space-between;
       }
 
       .grid-4 .featured-text {
