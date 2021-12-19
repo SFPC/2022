@@ -1345,7 +1345,8 @@ section.stacked-4 {
 
 
         figure.item img {
-          max-height: 30vh;
+          max-height: 30vh !important;
+          height: 30vh !important;
         }
 
         .stewards, .stewards .grid-2{
