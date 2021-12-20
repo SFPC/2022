@@ -863,6 +863,7 @@ p a, .details a {
       .entity .bio.bio-float {
       display: inline-block;
       float: right;
+      vertical-align: middle;
       width:  var(--large-text);
       height: var(--large-text);
       /* margin-right: var(--body-margin);
@@ -945,6 +946,10 @@ p a, .details a {
         }
 
         .accordion dt h3.active .bio {
+         opacity: 0;
+        }
+
+        .accordion dt.active  .bio {
          opacity: 0;
         }
 

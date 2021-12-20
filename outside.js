@@ -19,6 +19,7 @@ $('.shell').scroll(function () {
       $target =  $this.parent().next();
 
       $(this).addClass('active');
+      $(this).parent().addClass('active');
 
       if(!$target.hasClass('active')){
          // allPanels.removeClass('active').slideUp();
