@@ -177,8 +177,8 @@ h1 {
   o-transition: all .2s ease-in-out;
 }
 
-        .featured:hover .title, .title:hover {
-          color: var(--text-link);
+        .featured:hover .title, .title:hover, .featured:hover h6, .entity:hover h3 {
+          color: var(--text-link) ;
         }
 
 
@@ -194,6 +194,10 @@ h3, section .grid-2 p, .block-text, section .grid-2 ul {
   line-height: var(--medium-line-height);
   margin-bottom: calc(var(--text-margin)/3);
   letter-spacing: -.5px;
+  transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  ms-transition: all .2s ease-in-out;
+  o-transition: all .2s ease-in-out;
 }
 
       section .grid-2 ul li{
@@ -266,6 +270,10 @@ h6 {
   margin-bottom: 0;
   margin-top: 0;
   font-weight: lighter;
+  transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  ms-transition: all .2s ease-in-out;
+  o-transition: all .2s ease-in-out;
 }
 
 
