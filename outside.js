@@ -12,9 +12,9 @@ $('.shell').scroll(function () {
 // TEACHER ACCORDION
 (function($) {
 
-  var allPanels = $('.accordion > .person > dd').hide();
+  var allPanels = $('.accordion > .entity > dd').hide();
 
-  $('.accordion > .person > dt > h3, .accordion > .person > dt > h4').click(function() {
+  $('.accordion > .entity > dt > h3, .accordion > .entity > dt > h4').click(function() {
       $this = $(this);
       $target =  $this.parent().next();
 
