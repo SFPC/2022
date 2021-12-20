@@ -55,7 +55,7 @@ select#allSections {
 
 .fallwinter-2122 {
   background-color: var(--fallwinter-2122-background);
-  background-image: url('images/spring-2021-gradient.png');
+  background-image: url('images/sessions/fallwinter-2122/bg.png');
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -75,7 +75,7 @@ select#allSections {
   color: var(--cocoon-2021-text);
   box-sizing: border-box;
   border-color: var(--cocoon-2021-text);
-  background-image: url('images/cocoon-bg.png');
+  background-image: url('images/sessions/cocoon-2021/bg.png');
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -93,7 +93,7 @@ select#allSections {
   color: var(--codesocieties-2020-text);
   box-sizing: border-box;
   border-color: var(--codesocieties-2020-text);
-  background-image: url('images/knot-2.png');
+  background-image: url('images/sessions/codesocieties-2020/bg.png');
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: 100%;

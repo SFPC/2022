@@ -51,7 +51,7 @@
         </div>
 
         <div class="grid-2">
-          <div class="grid-2">
+          <div class="grid-2 def-div">
             <span id="definition" class="defintion"></span>
             <nav class="mobile-menu">Menu</nav>
           </div>
@@ -117,7 +117,7 @@
 
         <select id="allSections" onchange="sectionJump(this.value)">
               <option value="class">Jump to section...</option>
-              <option value="section-class-details">ABOUT THIS CLASS</option>
+              <option value="section-class-details">ABOUT </option>
               <option value="section-class-details">--Details & Description</option>
               <option value="section-course-of-study">--Course of Study</option>
               <option value="section-expectations">--Expectations</option>
@@ -132,6 +132,8 @@
               <option value="section-refund">--Refund Policy</option>
               <option value="section-classes">OPPORTUNITIES</option>
             </select>
+
+            <div class="fixed-apply hide-apply">Apply Now</div>
 
 
 
@@ -152,7 +154,9 @@
 
                     <div class="grid-2 class-details">
 
-                      <img id="class-image" src="https://sfpc.io/static/img/darkmatters/darkmatters3.png">
+
+
+                      <img id="class-image" src="images/sessions/spring-2022/classes/darkmatters/cover.jpg">
 
                       <div class="details">
                         <div class="labels">Teachers</div>
@@ -180,7 +184,7 @@
                       </div>
 
                       <p class="large apply">
-                        <a href="#">Apply Now</a>
+                        <a href="#" id="application-link">Apply Now</a>
                       </p>
 
 
@@ -226,13 +230,16 @@
                          <h4>Francisco Rojo, Fall 2019</h4></figure>
 
                        <div id="carousel-images" class="class-images after-launch">
-                         <figure class="item participate-img"><img src="https://sfpc.io/static/img/darkmatters/darkmatters5.png"></figure>
-                         <figure class="item participate-img"><img src="images/community/32.jpg"></figure>
-                         <figure class="item participate-img"><img src="images/community/42.jpg"></figure>
-                         <figure class="item participate-img"><img src="https://zai.zone/wp-content/uploads/dictionary_prev.jpg"></figure>
-                         <figure class="item participate-img"><img src="https://sfpc.io/static/img/darkmatters/darkmatters4.jpg"></figure>
-                         <figure class="item participate-img"><img src="images/community/25.jpg"></figure>
-                         <figure class="item participate-img"><img src="images/community/8.jpg"></figure>
+                         <figure class="item participate-img"><img src="images/sessions/spring-2022/classes/darkmatters/0.jpg"> Pages from Fall 2019 zine </figure>
+                         <figure class="item participate-img"><img src="images/sessions/spring-2022/classes/darkmatters/1.jpg"></figure>
+                         <figure class="item participate-img"><img src="images/sessions/spring-2022/classes/darkmatters/2.jpg"></figure>
+                         <figure class="item participate-img"><img src="images/sessions/spring-2022/classes/darkmatters/3.jpg"></figure>
+                         <figure class="item participate-img"><img src="images/sessions/spring-2022/classes/darkmatters/4.jpg"></figure>
+                         <figure class="item participate-img"><img src="images/sessions/spring-2022/classes/darkmatters/5.jpg"></figure>
+                         <figure class="item participate-img"><img src="images/sessions/spring-2022/classes/darkmatters/6.jpg"></figure>
+                         <figure class="item participate-img"><img src="images/sessions/spring-2022/classes/darkmatters/7.jpg"></figure>
+                         <figure class="item participate-img"><img src="images/sessions/spring-2022/classes/darkmatters/8.jpg"></figure>
+                         <figure class="item participate-img"><img src="images/sessions/spring-2022/classes/darkmatters/9.jpg"></figure>
                        </div>
 
 
@@ -247,8 +254,8 @@
                <section>
                    <div class="grid-2">
                      <p>
-                      <span id="test-text">You are viewing photos from past sessions. Read participant <a href="#testimonials" class="testimonials">testimonials</a>.</span>
-                      <span id="photos-text" class="hide-text">You are viewing participant testimonials. View <a href="#photos" class="participate-photos">photos</a> from past sessions.</span>
+                      <span id="test-text">You are viewing photos related to this class. Read participant <a href="#testimonials" class="testimonials">testimonials</a>.</span>
+                      <span id="photos-text" class="hide-text">You are viewing participant testimonials. View <a href="#photos" class="participate-photos">photos</a> related to this class.</span>
                      </p>
                    </div>
 
@@ -307,24 +314,43 @@
 
                 <section id="section-teachers">
                     <div class="grid-2">
-                      <h1>Meet the Teachers</h1>
+                      <h1>Meet the Teachers & Organizers</h1>
                     </div>
 
                     <div class="grid-2 class-details">
 
-                        <div class="teacher">
-                          <span class="bio bio-1" style="background-image: url('people/american.jpg')" role="img"></span>
-                          <p>  <a href="">American Artist</a> (Teacher) makes thought experiments that mine the history of technology, race, and knowledge production, beginning with their legal name change in 2013. Their artwork primarily takes the form of sculpture, software, and single-channel video. Artist is a resident of Red Bull Arts Detroit, a recipient of the Queens Museum Jerome Foundation Fellowship, a former resident of EYEBEAM, Pioneer Works, and the Whitney Museum Independent Study Program. They have exhibited at the Whitney Museum of American Art; MoMA PS1; Studio Museum in Harlem; Museum of Contemporary Art Chicago; and Nam June Paik Center, Seoul. They have had solo museum exhibitions at The Queens Museum, New York and The Museum of African Diaspora, California. Their work has been featured in the New York Times, Artforum, and Huffington Post. Artist is a 2021 Regents’ Lecturer at UCLA and teaches critical theory at the School for Poetic Computation.</p>
-                        </div>
 
-                        <div class="teacher">
-                          <span class="bio bio-1" style="background-image: url('people/american.jpg')" role="img"></span>
-                          <p>  <a href="">Zainab Aliyu</a> (Assistant Teacher) "Zai" is an artist and cultural worker living in Occupied Lenapehoking (Brooklyn, New York, USA). Her work is about the material affect of the "immaterial." She contextualizes the cybernetic and temporal entanglement embedded within societal dynamics to understand how all sociotechnological systems of control are interconnected, and how we are all implicated through time. She often dreams, experiments and inquires through built virtual environments, printed matter, video, archives, writing, installation and community-participatory (un)learning.</p>
-                        </div>
+                      <dl class="accordion">
 
-                        <div class="teacher">
-                          <p>This class is organized by <a href="" id="organizer">Zainab Aliyu</a>.</p>
-                        </div>
+                          <div class="person">
+                              <dt>
+                                <h4 id="role">teacher</h4> <h3>American Artist <span class="bio bio-float" style="background-image: url('images/people/american-artist.jpg')" role="img"></h3>
+                                  <div class="clear"></div>
+                                  <dd><span class="bio" style="background-image: url('images/people/american-artist.jpg')" role="img"></span>
+                                  <p>American Artist makes thought experiments that mine the history of technology, race, and knowledge production, beginning with their legal name change in 2013. Their artwork primarily takes the form of sculpture, software, and single-channel video. Artist is a resident of Red Bull Arts Detroit, a recipient of the Queens Museum Jerome Foundation Fellowship, a former resident of EYEBEAM, Pioneer Works, and the Whitney Museum Independent Study Program. They have exhibited at the Whitney Museum of American Art; MoMA PS1; Studio Museum in Harlem; Museum of Contemporary Art Chicago; and Nam June Paik Center, Seoul. They have had solo museum exhibitions at The Queens Museum, New York and The Museum of African Diaspora, California. Their work has been featured in the New York Times, Artforum, and Huffington Post. Artist is a 2021 Regents’ Lecturer at UCLA and teaches critical theory at the School for Poetic Computation.
+                                  <BR><BR>
+                                    <a href="">website</a> · <a href="">instagram</a>
+                                  </p>
+                                  </dd>
+                              </dt>
+                          </div>
+
+
+                          <div class="person">
+                              <dt><h4 id="role">assistant teacher & session organizer</h4> <h3>Zainab Aliyu <span class="bio bio-float" style="background-image: url('images/people/zainab-aliyu.jpg')" role="img"></h3>
+
+                                  <dd><span class="bio" style="background-image: url('images/people/zainab-aliyu.jpg')" role="img"></span>
+                                  <p>Zai is an artist and cultural worker living in Occupied Lenapehoking (Brooklyn, New York, USA). Her work is about the material affect of the "immaterial." She contextualizes the cybernetic and temporal entanglement embedded within societal dynamics to understand how all sociotechnological systems of control are interconnected, and how we are all implicated through time. She often dreams, experiments and inquires through built virtual environments, printed matter, video, archives, writing, installation and community-participatory (un)learning.
+                                    Zai is currently a 2022 fellow at NYU Tisch's Future Imagination Collabotory, directing design at the African Film Festival at Lincoln Film Center in NYC, is a co-director of the School for Poetic Computation, and is tending to her creative practice at a collective studio warehouse named Soft Surplus.
+                                      <BR><BR>
+                                    <a href="">website</a> · <a href="">instagram</a>
+                                  </p>
+                                  </dd>
+                              </dt>
+                          </div>
+
+
+                      </dl>
 
 
 
@@ -369,8 +395,9 @@
                     </div>
 
                     <div class="grid-2">
-                      <p>Our classes are conducted in spoken English with audiovisual materials such as slides, code examples and video. Online classes will be held over Zoom. Please contact us with special accessibility requests. If you have any questions regarding the class, please email us at
-                        <a href="mailto:participate@sfpc.study">participate@sfpc.study</a>.
+                      <p>Our classes are conducted in spoken English with audiovisual materials such as slides, code examples and video. Online classes will be held over Zoom.
+                      </p>
+                      <p>Please take care and be well. We hope you are comfortable in your housing, living, and working situation in general. Never hesitate to ask us for advice and <a href="mailto:participate@sfpc.study">reach out</a> if you have accessibility requests or need any assistance during your time at SFPC. We will work closely with you towards co-creating the best learning environment for your needs.
                       </p>
                     </div>
                 </section>
@@ -385,7 +412,7 @@
 
                     <div class="grid-2">
                       <p class="large apply">
-                        <a href="#">Apply Now</a>
+                        <a href="#" id="application-link">Apply Now</a>
                       </p>
 
                       <p>Applications <span id="deadline-status">open until</span> <span id="deadline">February 22nd, 2022</span>.</p>
@@ -406,8 +433,9 @@
 
                     <div class="grid-2">
                       <p>
-                            <span id="cost">$1200</span> + Withfriends payment processing fees for <span id="number-classes">10</span> classes. Upon payment, your space in the class will be reserved.
-                              We offer scholarships for those who cannot pay full tuition. Read more about scholarships below.
+                            <span id="cost">$1200</span> + Withfriends payment processing fees for <span id="number-classes">10</span> classes.
+                            </p><p>Upon payment, your space in the class will be reserved.
+                         We offer scholarships for those who cannot pay full tuition. Read more about scholarships below.
 
                         </p>
                     </div>
@@ -491,7 +519,7 @@
 
                         <div class="grid-4 featured spring-2022 session" data-location="spring-2021">
                           <div class="featured-text">
-                            <img src="images/dark-matters.jpg">
+                            <img src="images/sessions/spring-2022/classes/darkmatters/cover.jpg">
                             <div class="top">
                               <h4 class="type"><a href="template-class-concurrent.html">class</a></h4>
                               <h2 class="title">Dark Matters</h2>
@@ -513,7 +541,7 @@
                               <h6>with Taylor Levy</h6>
                             </div>
                             <div class="bottom">
-                              <h4 class="details">October 26 - March 10, 2022 <span class="dot">·</span> 2 classes<span class="dot">·</span>Applications open </h4>
+                              <h4 class="details">October 26 - March 10, 2022 <span class="dot">·</span>Applications open </h4>
                             </div>
                           </div>
                         </div>
@@ -527,7 +555,7 @@
                               <h6>with Sam Lavigne</h6>
                             </div>
                             <div class="bottom">
-                              <h4 class="details">October 26 - March 10, 2022 <span class="dot">·</span> 2 classes<span class="dot">·</span>Applications open </h4>
+                              <h4 class="details">October 26 - March 10, 2022 <span class="dot">·</span>Applications open </h4>
                             </div>
                           </div>
                         </div>
@@ -541,7 +569,7 @@
                               <h6>with Melanie Hoff</h6>
                             </div>
                             <div class="bottom">
-                              <h4 class="details">October 26 - March 10, 2022 <span class="dot">·</span> 2 classes<span class="dot">·</span>Applications open </h4>
+                              <h4 class="details">October 26 - March 10, 2022 <span class="dot">·</span>Applications open </h4>
                             </div>
                           </div>
                         </div>
@@ -554,8 +582,6 @@
 
 
 
-
-                <div class="break"></div>
 
 
                 <section id="section-outro">

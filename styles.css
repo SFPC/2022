@@ -228,7 +228,7 @@ h3, section .grid-2 p, .block-text, section .grid-2 ul {
 
 
 
-h4, .roles {
+h4, .roles, caption, figure {
   font-size: var(--small-text);
   font-weight: bold;
   font-family: var(--main-title-font);
@@ -388,6 +388,18 @@ a {
           float: right;
         }
 
+        .def-div {
+          cursor: pointer;
+            transition: all .2s ease-in-out;
+            -moz-transition: all .2s ease-in-out;
+            ms-transition: all .2s ease-in-out;
+            o-transition: all .2s ease-in-out;
+        }
+
+        .def-div:hover {
+          opacity: .6;
+        }
+
         .logo, .mobile-menu {
           transition: all .2s ease-in-out;
           -moz-transition: all .2s ease-in-out;
@@ -480,11 +492,42 @@ section {
         }
 
 
+.fixed-apply {
+  z-index: 9999999999999;
+  position: fixed;
+  right: calc(4px + var(--body-margin)/2);
+  bottom: calc(4px + var(--footer-height));
+  border-radius: calc(var(--border-rad));
+  display: inline;
+  width: auto;
+  border: 0px;
+  cursor: pointer;
+    background: var(--text-link);
+    color: var(--background);
+  font-family: var(--main-title-font);
+  font-weight: bold;
+  font-size: var(--medium-text);
+  padding: var(--program-margin);
+  transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  ms-transition: all .2s ease-in-out;
+  o-transition: all .2s ease-in-out;
+  backdrop-filter: blur(3px);
+  line-height: var(--medium-line-height);
+}
 
 
+        .fixed-apply:hover {
+        color: #000;
+        background: rgba(255,255,255,.8);
+        }
+
+        .hide-apply {
+          opacity: 0;
+        }
 
 select#allSections {
-  z-index: 100000;
+  z-index: 9999999999999;
   position: fixed;
   left: calc(4px + var(--body-margin)/2);
   bottom: calc(4px + var(--footer-height));
@@ -498,6 +541,7 @@ select#allSections {
   font-family: var(--main-title-font);
   font-weight: bold;
   font-size: var(--medium-text);
+  line-height: var(--medium-line-height);
   /* color: var(--text-color); */
   color: #000;
   padding: var(--program-margin);
@@ -508,12 +552,14 @@ select#allSections {
   backdrop-filter: blur(3px);
 }
 
-select#allSections:hover {
-  box-shadow: 0px 0px 15px var(--box-shadow);
+select#allSections:hover{
+  background: var(--text-link);
+  color: var(--background);
 }
 
+
 select#allSections:focus {
-  outline: 1px solid var(--primary-color);
+  outline: 0px;
 
 }
 
@@ -791,6 +837,142 @@ p a, .details a {
   transition: all .2s ease-in-out;
   border-radius: 100%;
 }
+
+
+.accordion {
+  display: flex;
+    flex-direction: column;
+    gap: var(--body-margin);
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.person {
+  -moz-transition: all .2s ease-in-out;
+  ms-transition: all .2s ease-in-out;
+  o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+    border-radius: var(--border-rad);
+     /* margin-bottom: var(--body-margin); */
+     border: 1px dotted var(--text-color);
+}
+
+
+      .person .bio.bio-float {
+      display: inline-block;
+      float: right;
+      width:  var(--large-text);
+      height: var(--large-text);
+      /* margin-right: var(--body-margin);
+      margin-left: calc(var(--body-margin)/2); */
+      /* margin-bottom: calc(var(--body-margin)/2); */
+      margin-top: calc(var(--medium-text)* -1);
+      background-size: cover;
+      -moz-transition: all .2s ease-in-out;
+      ms-transition: all .2s ease-in-out;
+      o-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out;
+      border-radius: 100%;
+      }
+
+
+      .person dd .bio {
+      display: inline-block;
+      float: left;
+      width:  calc(12.5vw - var(--body-margin)*2);
+      height: calc(12.5vw - var(--body-margin)*2);
+      margin-right: var(--body-margin);
+      margin-left: calc(var(--body-margin)/2);
+      margin-bottom: calc(var(--body-margin)/2);
+      background-size: cover;
+      -moz-transition: all .2s ease-in-out;
+      ms-transition: all .2s ease-in-out;
+      o-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out;
+      border-radius: 100%;
+      }
+
+
+    .person.active {
+      border: 0px !important;
+    }
+      .accordion p {
+        margin-bottom: 0px !important
+      }
+        .accordion dt {
+          border-radius: var(--border-rad);
+          padding: var(--program-margin);
+          /* margin-bottom: var(--body-margin); */
+          cursor: pointer;
+          font-family: var(--main-special-font);
+          /* border-bottom: 0; */
+        }
+
+        .accordion .person:hover     {
+        border: 1px solid var(--text-link);
+        }
+
+        .accordion dt h3 {
+            margin-bottom: 0;
+        }
+
+        .person:hover .accordion dt h3:after {
+          color: var(--text-link);
+        }
+
+        .accordion dt h3:after {
+          content: ' ⤵';
+            color: var(--text-link);
+          font-size: calc(1 * var(--medium-text));
+        }
+
+        .accordion dt h3.active:after {
+          content: '';
+        }
+
+        .accordion dt h3.active .bio {
+         opacity: 0;
+        }
+
+        .clear {
+          clear:both;
+          height: 0px;
+          display: block;
+        }
+
+
+        .accordion dd {
+          border-radius: var(--border-rad);
+          padding: var(--program-margin);
+          /* margin-top: calc( var(--border-rad) * -4); */
+          /* margin-top: calc(-1* var(--body-margin) - 10px); */
+          /* margin-bottom: var(--body-margin); */
+          border-top: 0;
+          margin-inline-start: 0px;
+          position: relative;
+          /* top: calc(-1* var(--body-margin) - 10px); */
+          line-height: var(--medium-line-height);
+        }
+
+        .accordion dd.active {
+          border-top: 0;
+          background: var(--background);
+        }
+
+        .accordion dd.active ~ .accordion dt {
+        }
+
+        .accordion dt:last-of-type, .accordion dd:last-of-type {
+        }
+
+        .accordion dd:last-of-type {
+          /* border-top: 1px solid white;
+          position: relative;
+          top: -1px; */
+        }
+
 
 section.stacked-4 {
   display: flex;
@@ -1343,8 +1525,13 @@ section.stacked-4 {
         }
 
 
-        select#allSections {
+        select#allSections, .fixed-apply {
           font-size: var(--small-text);
+        }
+
+        .fixed-apply:hover {
+        color: #000;
+        background: rgba(255,255,255,.8);
         }
 
         .closed img.left {

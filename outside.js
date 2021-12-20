@@ -1,3 +1,41 @@
+
+// SHOW APPLY ON SCROLL
+$('.shell').scroll(function () {
+    var y = $(this).scrollTop();
+    if (y > 800) {
+      $('.fixed-apply').removeClass('hide-apply');
+    } else {
+      $('.fixed-apply').addClass('hide-apply');
+    }
+  });
+
+// TEACHER ACCORDION
+(function($) {
+
+  var allPanels = $('.accordion > .person > dd').hide();
+
+  $('.accordion > .person > dt > h3, .accordion > .person > dt > h4').click(function() {
+      $this = $(this);
+      $target =  $this.parent().next();
+
+      $(this).addClass('active');
+
+      if(!$target.hasClass('active')){
+         // allPanels.removeClass('active').slideUp();
+         $target.addClass('active').slideDown();
+      }
+
+      $this.scrollIntoView({
+        block: 'start',
+        behavior: 'smooth',
+      });
+
+    return false;
+  });
+
+})(jQuery);
+
+
 // RANDOM PARTICIPATE IMAGES
 
 let participateImages = [];
@@ -171,6 +209,11 @@ $(document).ready(function() {
   $('#definition').text(randDef);
   $('#marquee-definition').text(randDef);
 
+  $(".def-div").click(function() {
+    $('#definition').text(poeticcomputation[Math.floor( Math.random() * poeticcomputation.length )]);
+  });
+
+
   $(".testimonials").click(function() {
       $(".participate-img").addClass('hide').removeClass('show').addClass('hide-test').removeClass('show-test');
       $(".test").addClass('show-test').removeClass('hide-test');
@@ -218,24 +261,6 @@ $(document).ready(function() {
   });
 
 
-  // $('.testimonials').on('touchstart', function(){
-  //   $(".participate-img").addClass('hide').removeClass('show').addClass('hide-test').removeClass('show-test');
-  //   $(".test").addClass('show-test').removeClass('hide-test');
-  //   $(".test-text").addClass('hide-test').removeClass('show-test');
-  //   $(".photos-text").addClass('show-test').removeClass('hide-test');
-  //   slider.scrollLeft = 0;
-  //   slide2.scrollLeft = 0;
-  // });
-  //
-  // $('.participate-photos').on('touchstart', function(){
-  //     $(".participate-img").addClass('show').removeClass('hide').addClass('show-test').removeClass('hide-test');
-  //     $(".test").addClass('hide-test').removeClass('show-test');
-  //     $(".test-text").addClass('show-test').removeClass('hide-test');
-  //     $(".photos-text").addClass('hide-test').removeClass('show-test');
-  //     slider.scrollLeft = 0;
-  //     slide2.scrollLeft = 0;
-  // });
-
 
 
 
@@ -262,20 +287,23 @@ $(document).ready(function() {
 
     $(".featured").click(function() {
     window.location = $(this).find("a").attr("href");
-    // return false;
+    });
+
+    $(".featured h2").click(function() {
+    window.location = $(this).parent().closest('div').find("a").attr("href");
     });
 
 
+
+
     $(window).scroll(function() {
+            let mobileBrowser = checkMobile();
+            if(mobileBrowser){
+                  // $('.logo').addClass("hide");
+            }
+            else{
 
-
-    let mobileBrowser = checkMobile()
-    if(mobileBrowser){
-          // $('.logo').addClass("hide");
-    }
-    else{
-
-    }
+            }
 
 
     });
