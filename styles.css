@@ -936,7 +936,8 @@ p a, .details a {
         }
 
         .accordion dt h3:after {
-          content: ' ⤵';
+          /* content: ' ⤵'; */
+          content: '\FE0E ⤵';
             color: var(--text-link);
           font-size: calc(1 * var(--medium-text));
         }
