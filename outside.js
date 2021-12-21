@@ -395,7 +395,7 @@ document.addEventListener('DOMContentLoaded', () => {
   themeToggle.addEventListener('click', () => {
     if (modeStyles.href.includes('lcd')) {
       modeStyles.href = 'crt.css';
-      $('#shell').addClass('crt');
+      // $('#shell').addClass('crt');
       themeToggle.innerText = 'you are in cathode-ray mode. switch to liquid crystal mode.';
     } else {
       modeStyles.href = 'lcd.css';

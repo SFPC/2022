@@ -206,7 +206,7 @@ select#allSections, .fixed-apply  {
     text-shadow: 2.6208764473832513px 0 1px rgba(0,30,255,0.5), -2.6208764473832513px 0 1px rgba(255,0,80,0.3), 0 0 3px;
   }
 }
-.crt::after {
+#shell::after {
   content: " ";
   display: block;
   position: fixed;
@@ -220,7 +220,7 @@ select#allSections, .fixed-apply  {
   pointer-events: none;
   animation: flicker 1s infinite;
 }
-.crt::before {
+#shell::before {
   content: " ";
   display: block;
   position: fixed;
@@ -234,6 +234,6 @@ select#allSections, .fixed-apply  {
   pointer-events: none;
 }
 
-.crt h1, .crt p.large {
+#shell h1, #shell p.large {
   animation: textShadow 1.6s infinite;
 }
