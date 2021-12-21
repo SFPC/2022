@@ -44,7 +44,7 @@ let participateImagesFeatured = [];
 let spaceImages = [];
 let spaceImagesFeatured = [];
 
-for (let i = 0; i <= 3; i += 1) {
+for (let i = 0; i <= 4; i += 1) {
     participateImagesFeatured.push("images/community/featured/" + i.toString() + ".jpg");
 }
 
@@ -55,8 +55,8 @@ for (let i = 0; i <= 2; i += 1) {
 var pi1 = participateImagesFeatured[Math.floor( Math.random() * participateImagesFeatured.length )];
 var si1 = spaceImagesFeatured[Math.floor( Math.random() * spaceImagesFeatured.length )];
 
-for (var a=[],i=0;i<72;++i) a[i]=i; //community images
-for (var b=[],i=0;i<12;++i) b[i]=i; //space images
+for (var a=[],i=0;i<94;++i) a[i]=i; //community images
+for (var b=[],i=0;i<14;++i) b[i]=i; //space images
 
 function shuffle(array) {
   var tmp, current, top = array.length;
