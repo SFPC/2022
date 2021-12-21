@@ -297,11 +297,11 @@ $(document).ready(function() {
 
 
         if ($('.breadcrumb:contains("participate")').length > 0) {
-            $('#link-participate').addClass('underline');
+            $('a#link-participate').addClass('underline');
         }
 
         if ($('.breadcrumb:contains("about")').length > 0) {
-            $('#link-about').addClass('underline');
+            $('a#link-about').addClass('underline');
         }
         //
         // if (window.location.href.indexOf("about") > -1) {

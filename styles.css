@@ -755,7 +755,7 @@ h4.breadcrumb {
           content: ' > '
         }
 
-.underline {
+.underline, a.underline {
   text-decoration: underline !important;
 }
 
