@@ -351,6 +351,27 @@ $(document).ready(function() {
 
 
 
+
+            // $("a.link-show-grid").click(function() {
+            // $('body .website-grid').removeClass('grid-hide');
+            // });
+            //
+            // $(".website-grid").click(function() {
+            // $('.website-grid').addClass('grid-hide');
+            // });
+
+
+            $('.link-show-grid').hover(
+                function(){
+                   $('.website-grid').removeClass('grid-hide');
+                },
+                function(){
+                    $('.website-grid').addClass('grid-hide');
+               }
+);
+
+
+
 });
 
 

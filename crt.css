@@ -234,6 +234,10 @@ select#allSections, .fixed-apply  {
   pointer-events: none;
 }
 
-#shell h1, #shell p.large {
-  animation: textShadow 1.6s infinite;
+#shell h1
+, #shell p.large
+/* , #shell p.large a */
+/* , #shell p.large:hover  */
+{
+  animation: textShadow 10s infinite;
 }
