@@ -759,7 +759,8 @@ h4.breadcrumb {
   text-decoration: underline !important;
 }
 
-.nav li a.underline:hover {
+
+.nav li a.underline:hover, .nav li a:hover {
   opacity: .6;
 }
 
@@ -1047,6 +1048,10 @@ section.stacked-4 {
         /* grid-auto-rows: 60%; */
         grid-column-gap: var(--body-margin);
         grid-row-gap: calc(var(--body-margin)*2);
+        /* margin-bottom: calc(var(--text-margin)); */
+      }
+
+      .stacked .grid-1:first-child {
         margin-bottom: calc(var(--text-margin));
       }
 
