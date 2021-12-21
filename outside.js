@@ -1,15 +1,7 @@
 
-// SHOW APPLY ON SCROLL
-$('.shell').scroll(function () {
-    var y = $(this).scrollTop();
-    if (y > 800) {
-      $('.fixed-apply').removeClass('hide-apply');
-    } else {
-      $('.fixed-apply').addClass('hide-apply');
-    }
-  });
 
-// TEACHER ACCORDION
+
+// ENTITY ACCORDION
 (function($) {
 
   var allPanels = $('.accordion > .entity > dd').hide();
@@ -37,7 +29,7 @@ $('.shell').scroll(function () {
 })(jQuery);
 
 
-// RANDOM PARTICIPATE IMAGES
+// RANDOM CAROUSEL IMAGES (PARTICIPATE + SPACE)
 
 let participateImages = [];
 let participateImagesFeatured = [];
@@ -72,8 +64,6 @@ function shuffle(array) {
 a = shuffle(a);
 b = shuffle(b);
 
-
-
 for (let i = 0; i <= 9; i += 1) {
     spaceImages.push("images/space/" + b[i].toString() + ".jpg");
 }
@@ -81,7 +71,6 @@ for (let i = 0; i <= 9; i += 1) {
 for (let i = 0; i <= 19; i += 1) {
     participateImages.push("images/community/" + a[i].toString() + ".jpg");
 }
-
 
 $(".pi1 img").attr("src", pi1);
 $(".pi2 img").attr("src", participateImages[2]);
@@ -148,23 +137,28 @@ $( document ).ready(function() {
 // MOBILE WINDOW SIZE RESET
 
 function resetHeight(){
-    // reset the body height to that of the inner browser
     document.body.style.height = window.innerHeight + "px";
 }
-// reset the height whenever the window's resized
 window.addEventListener("resize", resetHeight);
-// called to initially set the height.
 resetHeight();
 
 
 
+/////////////////////// SCROLL //////////////////////////
 
 
-
-$(window).scroll(function(){
-  var scrollTop = $(window).scrollTop();
+// SMOOTH SCROLL TO TOP
+$(".top").click(function() {
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+    return false;
 });
 
+$(window).scroll(function(){
+      var scrollTop = $(window).scrollTop();
+});
+
+
+// SMOOTH SCROLL TO COST SECTION
 $(".more-about-cost").click(function() {
   document.getElementById('section-cost').scrollIntoView({
     block: 'start',
@@ -173,6 +167,7 @@ $(".more-about-cost").click(function() {
 });
 
 
+// SMOOTH SCROLL TO DROPDOWN SECTIONS
 function sectionJump(value){
 	document.getElementById(value).scrollIntoView({
     block: 'start',
@@ -180,144 +175,174 @@ function sectionJump(value){
   });
 }
 
+// SHOW APPLY ON SCROLL
+$('.shell').scroll(function () {
+    var y = $(this).scrollTop();
+    if (y > 800) {
+      $('.fixed-apply').removeClass('hide-apply');
+    } else {
+      $('.fixed-apply').addClass('hide-apply');
+    }
+  });
 
+
+
+/////////////////////// ON LOAD //////////////////////////
 
 $(window).on("load", function() {
-
-
 });
+
+
+/////////////////////// DOCU READY //////////////////////////
 
 $(document).ready(function() {
 
-  let mobileBrowser = checkMobile()
-  if(mobileBrowser){
-  }
+
+        // INTRO BIO EXPAND
+        $("a.expand").click(function() {
+          $(this).children("span.expanded").toggleClass('hide-expanded');
+          $(this).toggleClass('active');
+
+          $("a.expand").not(this).removeClass('active');
+          $("a.expand").not(this).children("span.expanded").addClass('hide-expanded');
+
+        });
 
 
 
-  var poeticcomputation = [
-         "Poetic computation is a relational practice organized around communal study."
-       , "Poetic computation is an act of resistance against utilitarian notions of progress and efficiency."
-       , "Poetic computation begins with the interfacing between two or more beings."
-       , "Poetic computation engages the computer as a medium for critical and artistic expression."
-       , "Poetic computation is both an aesthetic and affective experience of code."
-       , "Poetic computation can’t be separated from its historical, political and social impact."
-       , "Poetic computation is when technology is used for critical thinking and aesthetic inquiry."
-       , "Poetic computation is a colorful theory of culpability."
-  ];
-
-  randDef = poeticcomputation[Math.floor( Math.random() * poeticcomputation.length )];
-  $('#definition').text(randDef);
-  $('#marquee-definition').text(randDef);
-
-  $(".def-div").click(function() {
-    $('#definition').text(poeticcomputation[Math.floor( Math.random() * poeticcomputation.length )]);
-  });
-
-
-  $(".testimonials").click(function() {
-      $(".participate-img").addClass('hide').removeClass('show').addClass('hide-test').removeClass('show-test');
-      $(".test").addClass('show-test').removeClass('hide-test');
-      $("#test-text").addClass('hide-text');
-      $("#photos-text").removeClass('hide-text');
-      slider.scrollLeft = 0;
-      slider2.scrollLeft = 0;
-      slider3.scrollLeft = 0;
-
-      document.getElementById('participate-archive').scrollIntoView({
-        block: 'start',
-        behavior: 'smooth',
-      });
-
-  });
-
-  $(".participate-photos").click(function() {
-      $(".participate-img").addClass('show').removeClass('hide').addClass('show-test').removeClass('hide-test');
-      $(".test").addClass('hide-test').removeClass('show-test');
-      $("#test-text").removeClass('hide-text');
-      $("#photos-text").addClass('hide-text');
-      slider.scrollLeft = 0;
-      slider2.scrollLeft = 0;
-      slider3.scrollLeft = 0;
-
-      document.getElementById('participate-archive').scrollIntoView({
-        block: 'start',
-        behavior: 'smooth',
-      });
-  });
-
-
-  $(".mobile-menu").click(function() {
-      // $(".shell").addClass('shell-halfsize').removeClass('shell-fullsize');
-      $(".shell").toggleClass('shell-halfsize');
-      $(".shell").toggleClass('full-halfsize');
-      $(".mobile-menu-content").toggleClass('mobile-menu-content-show');
-
-      if ($(".mobile-menu").text() == "Menu") {
-        $(".mobile-menu").text("Close");
-    } else {
-        $(".mobile-menu").text("Menu");
-    };
-
-  });
+        // DO IF MOBILE
+          let mobileBrowser = checkMobile()
+          if(mobileBrowser){
+          }
 
 
 
+        // RANDOM POETIC COMPUTATION
+
+          var poeticcomputation = [
+                 "Poetic computation is a relational practice organized around communal study."
+               , "Poetic computation is an act of resistance against utilitarian notions of progress and efficiency."
+               , "Poetic computation begins with the interfacing between two or more beings."
+               , "Poetic computation engages the computer as a medium for critical and artistic expression."
+               , "Poetic computation is both an aesthetic and affective experience of code."
+               , "Poetic computation can’t be separated from its historical, political and social impact."
+               , "Poetic computation is when technology is used for critical thinking and aesthetic inquiry."
+               , "Poetic computation is a colorful theory of culpability."
+          ];
+
+          randDef = poeticcomputation[Math.floor( Math.random() * poeticcomputation.length )];
+          $('#definition').text(randDef);
+          $('#marquee-definition').text(randDef);
+
+          $(".def-div").click(function() {
+            $('#definition').text(poeticcomputation[Math.floor( Math.random() * poeticcomputation.length )]);
+          });
 
 
 
+        // TESTIMONIALS + PHOTOS TOGGLE
 
-//
-// if $("h4.breadcrumb a").innerHTML.indexOf("about") {
-//   $('a#link-about').addClass('underline');
-// } else {
-//   themeToggle.innerText = 'you are in cathode-ray mode. switch to liquid crystal mode.'
-//   $('#current-mode').html('cathode-ray')
-// }
+          $(".testimonials").click(function() {
+              $(".participate-img").addClass('hide').removeClass('show').addClass('hide-test').removeClass('show-test');
+              $(".test").addClass('show-test').removeClass('hide-test');
+              $("#test-text").addClass('hide-text');
+              $("#photos-text").removeClass('hide-text');
+              slider.scrollLeft = 0;
+              slider2.scrollLeft = 0;
+              slider3.scrollLeft = 0;
+
+              document.getElementById('participate-archive').scrollIntoView({
+                block: 'start',
+                behavior: 'smooth',
+              });
+
+          });
+
+          $(".participate-photos").click(function() {
+              $(".participate-img").addClass('show').removeClass('hide').addClass('show-test').removeClass('hide-test');
+              $(".test").addClass('hide-test').removeClass('show-test');
+              $("#test-text").removeClass('hide-text');
+              $("#photos-text").addClass('hide-text');
+              slider.scrollLeft = 0;
+              slider2.scrollLeft = 0;
+              slider3.scrollLeft = 0;
+
+              document.getElementById('participate-archive').scrollIntoView({
+                block: 'start',
+                behavior: 'smooth',
+              });
+          });
 
 
 
-  if (modeStyles.href.includes('lcd')) {
-    themeToggle.innerText = 'you are in liquid crystal mode. switch to cathode-ray mode.'
-    $('#current-mode').html('liquid crystal')
-  } else {
-    themeToggle.innerText = 'you are in cathode-ray mode. switch to liquid crystal mode.'
-    $('#current-mode').html('cathode-ray')
-  }
+        // MOBILE MENU
 
+          $(".mobile-menu").click(function() {
+              // $(".shell").addClass('shell-halfsize').removeClass('shell-fullsize');
+              $(".shell").toggleClass('shell-halfsize');
+              $(".shell").toggleClass('full-halfsize');
+              $(".mobile-menu-content").toggleClass('mobile-menu-content-show');
 
-    $(".featured").click(function() {
-    window.location = $(this).find("a").attr("href");
-    });
+              if ($(".mobile-menu").text() == "Menu") {
+                $(".mobile-menu").text("Close");
+            } else {
+                $(".mobile-menu").text("Menu");
+            };
 
-    $(".featured h2").click(function() {
-    window.location = $(this).parent().closest('div').find("a").attr("href");
-    });
+          });
 
 
 
 
-    $(window).scroll(function() {
-            let mobileBrowser = checkMobile();
-            if(mobileBrowser){
-                  // $('.logo').addClass("hide");
-            }
-            else{
-
-            }
 
 
-    });
+        // MODE TEXT
+
+        // if $("h4.breadcrumb a").innerHTML.indexOf("about") {
+        //   $('a#link-about').addClass('underline');
+        // } else {
+        //   themeToggle.innerText = 'you are in cathode-ray mode. switch to liquid crystal mode.'
+        //   $('#current-mode').html('cathode-ray')
+        // }
+
+          if (modeStyles.href.includes('lcd')) {
+            themeToggle.innerText = 'you are in liquid crystal mode. switch to cathode-ray mode.'
+            $('#current-mode').html('liquid crystal')
+          } else {
+            themeToggle.innerText = 'you are in cathode-ray mode. switch to liquid crystal mode.'
+            $('#current-mode').html('cathode-ray')
+          }
+
+
+
+
+        // FEATURED DIV LINK
+
+            $(".featured").click(function() {
+            window.location = $(this).find("a").attr("href");
+            });
+
+            $(".featured h2").click(function() {
+            window.location = $(this).parent().closest('div').find("a").attr("href");
+            });
+
+
+        // SCROLL ON MOBILE
+
+            $(window).scroll(function() {
+                    let mobileBrowser = checkMobile();
+                    if(mobileBrowser){
+                    }
+                    else{
+                    }
+            });
+
+
 
 });
 
 
 
-$(".top").click(function() {
-    $("html, body").animate({ scrollTop: 0 }, "slow");
-
-    return false;
-});
 
 
 
@@ -325,67 +350,6 @@ $(".top").click(function() {
 
 
 
-
-
-
-
-
-
-
-// EXPANDED LINKS
-
-function activeLinks() {
-    const shell = document.getElementById('shell');
-    const info = document.getElementById('info');
-    let expandableLinks = document.querySelectorAll('.expand');
-
-    expandableLinks.forEach((link) => {
-        link.addEventListener('click', function() {
-            // console.log(link);
-            showExpanded(link);
-        })
-        link.addEventListener('keypress', function() {
-            // console.log(link);
-            showExpanded(link);
-        })
-    })
-
-    function lighterBG() {
-        bgR += 1;
-        bgG += 1;
-        bgB += 1;
-        //  $("body").get(0).style.setProperty("--background", "rgb(" + bgR + "," + bgG + "," + bgB + ")");
-    }
-
-    function showExpanded(link) {
-        hideOtherExpandedLinks();
-        link.classList.add('active');
-        link.children[0].style.display = "inline";
-    }
-
-    function hideOtherExpandedLinks() {
-        expandableLinks.forEach((link) => {
-            if (link.classList.contains('active')) {
-                link.classList.remove('active');
-            }
-
-            if (link.children.length > 0) {
-                // console.log(link.children[0])
-                link.children[0].style.display = "none";
-            }
-        })
-    }
-
-    shell.addEventListener('touchstart', function() {
-        info.classList.add('touched');
-    }, false);
-
-    shell.addEventListener('touchend', function() {
-        if (info.classList.contains('touched')) {
-            info.classList.remove('touched');
-        }
-    }, false);
-}
 
 
 

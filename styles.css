@@ -1343,35 +1343,41 @@ section.stacked-4 {
 
 
 
-  p a.expand:hover .expanded {
-      /* text-shadow: none !important; */
-      text-shadow: 1px 1px 1px var(--background-shadow-green);
-      text-decoration: none !important;
-  }
-
-  p a.expand.active {
-      color: var(--secondary-color);
-      text-decoration: none !important;
-      /* text-shadow: none !important; */
-      text-shadow: 1px 1px 1px var(--background-shadow-green);
-  }
 
   a.expand {
-      text-decoration: underline;
-      /* border-bottom: 2px dotted var(--text-color); */
       display: inline;
-      margin: 0 3px;
+      /* margin: 0 3px; */
       cursor: pointer;
+      line-height: var(--large-line-height);
   }
 
   a.expand.active {
       display: inline;
+      color: var(--text-link) !important;
+      line-height: var(--large-line-height);
   }
 
+  a.expand.active span.link{
+      display: none;
+      line-height: var(--large-line-height);
+  }
 
   .expanded {
-      display: none;
+      color: var(--text-link);
+      text-decoration: none !important;
+      line-height: var(--large-line-height);
   }
+
+  a.expand.active {
+      text-decoration: none !important;
+      line-height: var(--large-line-height);
+  }
+
+  .hide-expanded {
+      display: none;
+      line-height: var(--large-line-height);
+  }
+
 
 
 
