@@ -293,17 +293,29 @@ $(document).ready(function() {
 
 
 
+        // ADD UNDERLINE TO MENU BASED ON LINK
+
+
+        if ($('.breadcrumb:contains("participate")').length > 0) {
+            $('#link-participate').addClass('underline');
+        }
+
+        if ($('.breadcrumb:contains("about")').length > 0) {
+            $('#link-about').addClass('underline');
+        }
+        //
+        // if (window.location.href.indexOf("about") > -1) {
+        //     $('#link-about').addClass('underline');
+        // }
+        //
+        // if (window.location.href.indexOf("participate") > -1) {
+        //     $('#link-participate').addClass('underline');
+        // }
+
 
 
 
         // MODE TEXT
-
-        // if $("h4.breadcrumb a").innerHTML.indexOf("about") {
-        //   $('a#link-about').addClass('underline');
-        // } else {
-        //   themeToggle.innerText = 'you are in cathode-ray mode. switch to liquid crystal mode.'
-        //   $('#current-mode').html('cathode-ray')
-        // }
 
           if (modeStyles.href.includes('lcd')) {
             themeToggle.innerText = 'you are in liquid crystal mode. switch to cathode-ray mode.'

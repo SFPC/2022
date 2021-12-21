@@ -759,6 +759,10 @@ h4.breadcrumb {
   text-decoration: underline !important;
 }
 
+.nav li a.underline:hover {
+  opacity: .6;
+}
+
 p, section ul {
   color: var(--text-color);
 }
