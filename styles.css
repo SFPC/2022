@@ -871,6 +871,7 @@ p a, .details a {
           border-radius: var(--border-rad);
            /* margin-bottom: var(--body-margin); */
            border: 1px dotted var(--text-color);
+           background: var(--background);
       }
 
 
@@ -1354,20 +1355,20 @@ section.stacked-4 {
 
 
 
-  a.expand {
+  span.expand {
       display: inline;
       /* margin: 0 3px; */
       cursor: pointer;
       line-height: var(--large-line-height);
   }
 
-  a.expand.active {
+  span.expand.active {
       display: inline;
       color: var(--text-link) !important;
       line-height: var(--large-line-height);
   }
 
-  a.expand.active span.link{
+  span.expand.active a.link{
       display: none;
       line-height: var(--large-line-height);
   }
@@ -1378,7 +1379,11 @@ section.stacked-4 {
       line-height: var(--large-line-height);
   }
 
-  a.expand.active {
+  .labels-info .expanded {
+    color: var(--text-color);
+  }
+
+  span.expand.active {
       text-decoration: none !important;
       line-height: var(--large-line-height);
   }
@@ -1389,10 +1394,31 @@ section.stacked-4 {
   }
 
 
+#class.beforeLaunch {
+
+}
 
 
+#class.appsOpen .show-duringClass, #class.appsOpen .show-afterClass,
+#class.appsClosed .show-duringClass, #class.appsClosed .show-afterClass {
+  display: none;
+}
 
+#class.appsClosed .hide-appsClosed {
+  display: none;
+}
 
+#class.appsOpen .hide-appsOpen {
+  display: none;
+}
+
+#class.duringClass .show-duringClass {
+  display: inherit !important;
+}
+
+#class.afterClass .show-afterClass, #class.afterClass .show-duringClass {
+  display: inherit !important;
+}
 
 
 

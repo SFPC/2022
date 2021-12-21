@@ -4,14 +4,33 @@
     --text-color: var(--spring-2022-text);
     --text-link: var(--spring-2022-link);
     --box-shadow: rgba(0,0,0,.3);
+/*
+    --background: var(--cocoon-2021-background);
+    --text-color: var(--cocoon-2021-text);
+    --text-link: var(--cocoon-2021-link);
+    --box-shadow: rgba(0,0,0,.3); */
 
     /* --spring-2022-background: #C8C8A7;
     --spring-2022-text: #000;
     --spring-2022-link: #777744; */
 
+    /* --spring-2022-background: #dedede;
+    --spring-2022-text: #0F2BD4;
+    --spring-2022-link: blueviolet; */
+
+    /* --spring-2022-background: #dedede;
+    --spring-2022-text: #0F2BD4;
+    --spring-2022-link: #58595b; */
+
     --spring-2022-background: #dedede;
     --spring-2022-text: #0F2BD4;
-    --spring-2022-link: blueviolet;
+    --spring-2022-link: #58595b;
+
+    /* --spring-2022-background: #e5e3e4;
+    --spring-2022-text: #555658;
+    --spring-2022-link: #ff5e4a; */
+
+
 
     --fallwinter-2122-background: #fff;
     --fallwinter-2122-text: #000;
@@ -27,6 +46,13 @@
 
 }
 
+/* .shell {
+  background-image: url('images/sessions/cocoon-2021/bg.png');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-blend-mode: screen;
+} */
 
 select#allSections {
   background: rgba(255,255,255,.8);
@@ -69,6 +95,9 @@ select#allSections {
         }
 
 
+#class.cocoon-2021  {
+  background: none;
+}
 
 .cocoon-2021 {
   background-color: var(--cocoon-2021-background);

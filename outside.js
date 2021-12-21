@@ -199,12 +199,12 @@ $(document).ready(function() {
 
 
         // INTRO BIO EXPAND
-        $("a.expand").click(function() {
+        $("span.expand").click(function() {
           $(this).children("span.expanded").toggleClass('hide-expanded');
           $(this).toggleClass('active');
 
-          $("a.expand").not(this).removeClass('active');
-          $("a.expand").not(this).children("span.expanded").addClass('hide-expanded');
+          $("span.expand").not(this).removeClass('active');
+          $("span.expand").not(this).children("span.expanded").addClass('hide-expanded');
 
         });
 
@@ -394,11 +394,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   themeToggle.addEventListener('click', () => {
     if (modeStyles.href.includes('lcd')) {
-      modeStyles.href = 'crt.css'
-      themeToggle.innerText = 'you are in cathode-ray mode. switch to liquid crystal mode.'
+      modeStyles.href = 'crt.css';
+      $('#shell').addClass('crt');
+      themeToggle.innerText = 'you are in cathode-ray mode. switch to liquid crystal mode.';
     } else {
-      modeStyles.href = 'lcd.css'
-      themeToggle.innerText = 'you are in liquid crystal mode. switch to cathode-ray mode.'
+      modeStyles.href = 'lcd.css';
+      themeToggle.innerText = 'you are in liquid crystal mode. switch to cathode-ray mode.';
     }
     localStorage.setItem('mode',modeStyles.href)
   })
