@@ -921,6 +921,7 @@ p a, .details a {
       margin: calc(var(--program-margin)/2) 0  calc(var(--program-margin)) 0;
       /* line-height: 1.5; */
       /* text-transform: lowercase; */
+      max-width: calc(100% - var(--body-margin)*2 - var(--large-text));
     }
       .accordion p {
         margin-bottom: 0px !important
