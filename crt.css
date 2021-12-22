@@ -235,9 +235,9 @@ select#allSections, .fixed-apply  {
 }
 
 #shell h1
-, #shell p.large
+/* , #shell p.large */
 /* , #shell p.large a */
 /* , #shell p.large:hover  */
 {
-  animation: textShadow 10s infinite;
+  /* animation: textShadow 10s infinite; */
 }

@@ -19,7 +19,7 @@
     <meta property="twitter:description" content="The School for Poetic Computation is changing. This summer, we are making a temporary space together: a COCOON. We invite you into our collective studies as we work towards an experimental curriculum that can grow and transform over time.">
     <meta property="twitter:image" content="http://sfpc.io/cocoon/sfpc-cocoon.jpg">
     <link href="styles.css" rel="stylesheet">
-    <link id="mode" rel="stylesheet" type="text/css" href="lcd.css" />
+    <link id="mode" rel="stylesheet" type="text/css" href="crt.css" />
     <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
 
     <script src="jquery-3.6.0.min.js"></script>
@@ -98,19 +98,41 @@
         <div class="mode"><button id="mode-toggle">switch to cathode-ray mode</button></a></div>
       </div>
 
+
+      <div class="website-grid grid-hide">
+        <div class="grid-inner">
+        <section>
+          <div class="grid-2">
+            <p class="large">School</p>
+          </div>
+          <div class="grid-2">
+            <p class="large">for</p>
+          </div>
+          <div class="grid-2">
+            <p class="large">Poetic</p>
+          </div>
+          <div class="grid-2">
+            <p class="large">Computation</p>
+          </div>
+        </section>
+      </div>
+      </div>
+
+
       <div id="shell" class="shell shell-fullsize about">
 
 
         <select id= "allSections" onchange="sectionJump(this.value)">
           <option value ="">Jump to section...</option>
           <option value ="mission">Mission</option>
-          <option value ="participating">Participating</option>
-          <option value ="visiting">Visiting</option>
+          <option value ="participate">Participate</option>
+          <option value ="visit">Visit</option>
           <option value ="stewards">Stewards</option>
           <option value ="accessibility">Accessibility</option>
           <option value ="scholarships">Scholarships</option>
-          <option value ="finances">Support & Finances</option>
+          <option value ="funding">Funding</option>
           <option value ="press">Press</option>
+          <option value ="about-our-website">About our Website</option>
         </select>
 
         <h4 class="breadcrumb"><a href="">about</a></h4>
@@ -125,7 +147,8 @@
                     <div class="grid-2">
                       <p>
                         The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It is a place for unlearning and learning. It’s a hybrid of a school, residency, and research group.
-                        We are committed to realizing the vision of a beautiful school where people who are Black, Indigenous, Disabled, and/or LGBTQIA+ are empowered to share their ideas and study together.
+                      </p>
+                      <p>We are committed to realizing the vision of a beautiful school where people who are Black, Indigenous, Disabled, and/or LGBTQIA+ are empowered to share their ideas and study together.
                       </p><p>
                         <a href="#">more about our mission, pedagogy and how we define poetic computation...</a>
                         </p>
@@ -135,14 +158,14 @@
                 <div class="break"></div>
 
 
-                <section id="participating">
+                <section id="participate">
                     <div class="grid-2">
-                      <h1>Participating </h1>
+                      <h1>Participate </h1>
                     </div>
 
                     <div class="grid-2">
                       <p>
-                        We seek to put together a cohort of people with diverse backgrounds and interests who will have a lot to offer to each other as peers. We center people from identities and backgrounds that are often marginalized and excluded from art, technology, and higher education spaces, and look for a cohort with a wide range of passions, skills, experiences, and technical abilities. Above all, we look for openness to building a shared experience around learning, critical theory, art making, and technology.
+                        We seek to put together a cohort of people with diverse backgrounds and interests who will have a lot to offer to each other as peers. We center people from identities and backgrounds that are often excluded from art, technology, and higher education spaces, and look for a cohort with a wide range of passions, skills, experiences, and technical abilities. Above all, we look for openness to building a shared experience around learning, critical theory, art making, and technology.
 
                       </p><p>
                         <a href="about-participating.html">more about what we look for in participants...</a>
@@ -221,15 +244,16 @@
 
 
 
-                <section id="visiting">
+                <section id="visit">
                     <div class="grid-2">
-                      <h1>Visiting </h1>
+                      <h1>Visit </h1>
                     </div>
 
                     <div class="grid-2">
                       <p>
                         The School for Poetic Computation does not currently have a physical location and since Spring 2020 we have been operating and learning online as we navigate the COVID-19 pandemic. From 2015 to 2020, we were located in the Westbeth Artist Community of West Village, New York City, on the unceded land of the Lenape people. We studied within the computational history lineage of Bell Labs that occupied that space many years before. We are in search for a new temporary and permanent space; if you have any leads, please <a href="">contact us</a>!
-                        <BR><BR>
+                      </p>
+                      <p>
                         All members and guests of the SFPC community agree to uphold SFPC’s Community Agreement when entering community spaces, both physically and online. When we commit to actively participating in the social material of our learning, we can best work together to create boundaries that make it easier for everyone to feel as safe and comfortable as possible.
                       </p><p class="large">
                         <a href="#">SFPC Community Agreement</a>
@@ -323,7 +347,7 @@
                           <div class="entity">
                               <dt>
                                 <span class="bio bio-float" style="background-image: url('images/people/neta-bomani.jpg')" role="img"></span>
-                                <h4 id="role">Programming, Publishing</h4> <h3>Neta Bomani </h3>
+                                <h4 id="role">Community, Programming, Publishing</h4> <h3>Neta Bomani </h3>
                                 <div class="clear"></div>
                                   <dd><span class="bio" style="background-image: url('images/people/neta-bomani.jpg')" role="img"></span>
                                   <p>
@@ -391,7 +415,7 @@
 
                             <div class="grid-2">
                               <h6>Previous leadership</h6>
-                                <span class="roles">*No longer stewarding the school:</span>
+                                <span class="roles">SFPC was founded by the following people who are no longer involved in directing the school:</span>
 
                               <p class="medium">
                                 Taeyoon Choi, Lauren Gardner, Zach Lieberman, Jen Lowe, Amit Pitaru
@@ -482,7 +506,11 @@
 
                     <div class="grid-2">
                       <p>
-                        If you can’t pay full tuition, we really still want you to apply. Our application will ask you how much you can pay. We will offer subsidized positions in all of our classes, once each one has enough students enrolled that we’re able to do so. We have also started a <a href="">scholarship fund</a>, and we will be offering additional scholarships as community members <a href="">redistribute their wealth</a> through SFPC. We direct scholarship funds towards students who are low-income, Black, Indigenous, racialized, gendered, disabled, Queer, trans, underrepresented, oppressed and minoritized.</p><p>
+                        If you can’t pay full tuition, we really still want you to apply. Our application will ask you how much you can pay. We will offer subsidized positions in all of our classes, once each one has enough participants enrolled that we’re able to do so.
+                      </p>
+                      <p>We have also started a <a href="">scholarship fund</a>, and we will be offering additional scholarships as community members <a href="">redistribute their wealth</a> through SFPC.
+                      We direct scholarship funds towards participants who are low-income, Black, Indigenous, racialized, gendered, disabled, Queer, trans, oppressed, historicially excluded and underrepresented.
+                    </p><p>
                           <a href="#">more about scholarships...</a>
                           </p>
                     </div>
@@ -491,16 +519,18 @@
                 <div class="break"></div>
 
 
-                <section id="finances">
+                <section id="funding">
                     <div class="grid-2">
-                      <h1>Support & Finances </h1>
+                      <h1>Funding </h1>
                     </div>
 
                     <div class="grid-2">
-                      <p>
-                        We're committed to radical transparency and keeping the public informed on how we make and spend money and we publish our finances <a href="">here</a>.
-                        <br><BR>We are so thankful to our generous donors and members for supporting scholarships in such a direct way. For SFPC to be the kind of place the community has always meant it to be, it needs to become a platform for wealth redistribution. If you are a former student, prospective student, or friend of the school, and you have the financial privilege to do so, <a href="">please donate generously</A>. There is enough wealth in this community to make sure no one is ever rejected because of their inability to pay, and becoming that school will make SFPC the impactful, imaginative, transformative center of poetry and justice that we know it can be. We know that inside this community there is more capacity for mutual aid and redistribution, and we are always looking for help elsewhere.
-                        </p><p>
+                      <p>We are so thankful to our generous donors and members for supporting scholarships in such a direct way. For SFPC to be the kind of place the community has always meant it to be, it needs to become a platform for wealth redistribution. If you are a former participant, prospective participant, or friend of the school, and you have the financial privilege to do so, <a href="">please donate generously</A>. There is enough wealth in this community to make sure no one is ever rejected because of their inability to pay, and becoming that school will make SFPC the impactful, imaginative, transformative center of poetry and justice that we know it can be. We know that inside this community there is more capacity for mutual aid and redistribution, and we are always looking for help elsewhere.
+                        </p>
+                          <p>
+                            We're committed to radical transparency and keeping the public informed on how we make and spend money and we publish our finances <a href="">here</a>.
+                          </p>
+                          <p>
                           <a href="https://withfriends.co/school_for_poetic_computation" target="_blank">support our school through memberships & donations...</a>
                           </p>
                     </div>
@@ -566,6 +596,28 @@
                   </main>
 
                 </div>
+
+
+                <div class="break"></div>
+
+                <section id="about-our-website">
+                    <div class="grid-2">
+                      <h1 class="">About our Website</h1>
+                    </div>
+
+                    <div class="grid-2">
+                      <p>
+                        The School for Poetic Computation is an experimental school in New York City supporting interdisciplinary study in art, code, hardware and critical theory. It is a place for unlearning and learning. It’s a hybrid of a school, residency, and research group.
+                      </p>
+                     <p>
+                        <a href="#">more about our mission, pedagogy and how we define poetic computation...</a>
+                        </p>
+                    </div>
+                </section>
+
+
+                <div class="break-endpage"></div>
+
 
 
         </div>

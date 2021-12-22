@@ -55,6 +55,7 @@
     src: url('fonts/bretagne_self-modern_italic_web.ttf');
     font-weight: normal;
     font-style: italic;
+    font-display: block;
 }
 
 @font-face {
@@ -63,7 +64,7 @@
         url('fonts/Hershey-Noailles-Futura-Duplex-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
-    font-display: swap;
+    font-display: block;
 }
 
 @font-face {
@@ -72,7 +73,7 @@
         url('fonts/Hershey-Noailles-Futura-Duplex-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
+    font-display: block;
 }
 
 @font-face {
@@ -81,7 +82,7 @@
         url('fonts/AlteHaasGrotesk.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
+    font-display: block;
 }
 
 @font-face {
@@ -89,7 +90,7 @@
     src: url('fonts/VioletSans-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
+    font-display: block;
 }
 
 @font-face {
@@ -97,7 +98,7 @@
     src: url('fonts/Hershey-Noailles-Times-Simplex-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
+    font-display: block;
 }
 
 
@@ -142,6 +143,7 @@ body {
     background-color: #000;
     margin: 0;
     font: var(--main-title-font);
+    color: inherit;
 }
 
 h1,
@@ -303,6 +305,7 @@ img {
   -moz-transition: all .2s ease-in-out;
   ms-transition: all .2s ease-in-out;
   o-transition: all .2s ease-in-out;
+  pointer-events: none
 }
 
 .grid-hide {
@@ -311,8 +314,8 @@ img {
 }
 
 .grid-show {
-  opacity: 0;
-  visibility: hidden;
+  opacity: 1;
+  visibility: visible;
 }
 
 .grid-inner {
@@ -332,6 +335,10 @@ img {
     text-align: center;
     box-sizing: border-box;
     /* margin-top: calc(var(--header-height) - var(--body-margin)/2) ; */
+}
+
+#inner-footer {
+  text-align: center;
 }
 
 .website-grid .grid-2 p {
@@ -451,6 +458,7 @@ a {
           height: var(--header-height);
           width: auto;
           float: right;
+          /* margin-right: var(--body-margin); */
         }
 
         .def-div {
@@ -535,10 +543,15 @@ section {
 }
 
 .break {
-  border-bottom: 2px solid var(--text-color);
+  border-bottom: 1px dashed var(--text-color);
   margin-bottom: var(--text-margin);
   padding-bottom: var(--text-margin);
 }
+
+
+      .break-endpage {
+        margin-bottom: calc(var(--text-margin)*3);
+      }
 
       .break-noline {
         margin-bottom: var(--text-margin);
@@ -590,6 +603,7 @@ section {
 
         .hide-apply {
           opacity: 0;
+          pointer-events: none;
         }
 
 select#allSections {
@@ -665,7 +679,7 @@ select#allSections:focus {
 
       .grid-1 .grid-2 {
         display: flex;
-        width: 50%;
+        width: calc(50% + var(--body-margin));
       }
 
 
@@ -1257,6 +1271,7 @@ section.stacked-4 {
             border-width: 4px 1px 1px 1px;
             border-style: solid;
             font-family: courier;
+            box-sizing: border-box;
           }
 
           .block-text:hover {
@@ -1762,6 +1777,16 @@ section.stacked-4 {
         margin-right: calc(var(--body-margin)*2);
         margin-left: calc(var(--body-margin)/2);
         margin-bottom: calc(var(--body-margin)/2);
+        }
+
+
+        .letter img.img-4 {
+            width: calc(50% - var(--body-margin));
+        }
+
+        .intro a, p.large a {
+            text-underline-offset: 3px;
+            text-decoration-thickness: 2px;
         }
 
 

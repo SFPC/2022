@@ -47,7 +47,7 @@ for (let i = 0; i <= 2; i += 1) {
 var pi1 = participateImagesFeatured[Math.floor( Math.random() * participateImagesFeatured.length )];
 var si1 = spaceImagesFeatured[Math.floor( Math.random() * spaceImagesFeatured.length )];
 
-for (var a=[],i=0;i<94;++i) a[i]=i; //community images
+for (var a=[],i=0;i<111;++i) a[i]=i; //community images
 for (var b=[],i=0;i<14;++i) b[i]=i; //space images
 
 function shuffle(array) {
@@ -166,6 +166,13 @@ $(".more-about-cost").click(function() {
   });
 });
 
+$(".citation#1").each().click(function() {
+  document.getElementById('#1').href.scrollIntoView({
+    block: 'start',
+    behavior: 'smooth',
+  });
+});
+
 
 // SMOOTH SCROLL TO DROPDOWN SECTIONS
 function sectionJump(value){
@@ -185,6 +192,26 @@ $('.shell').scroll(function () {
     }
   });
 
+
+
+
+$('#shell').bind('scroll', function()
+{
+
+  // if (!$(this).hasClass("test")) {
+
+
+  if($(this).scrollTop() + $(this).innerHeight()>=$(this)[0].scrollHeight && !$(this).hasClass("home"))
+  {
+    $('#allSections').addClass('hide-apply');
+    $('.website-grid').removeClass('grid-hide');
+    $('#inner-footer').addClass('hide-apply');
+  } else {
+    $('#allSections').removeClass('hide-apply');
+    $('.website-grid').addClass('grid-hide');
+    $('#inner-footer').removeClass('hide-apply');
+  }
+});
 
 
 /////////////////////// ON LOAD //////////////////////////
