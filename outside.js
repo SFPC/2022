@@ -200,8 +200,9 @@ $('#shell').bind('scroll', function()
 
   // if (!$(this).hasClass("test")) {
 
+  let mobileBrowser = checkMobile()
 
-  if($(this).scrollTop() + $(this).innerHeight()>=$(this)[0].scrollHeight && !$(this).hasClass("home"))
+  if($(this).scrollTop() + $(this).innerHeight()>=$(this)[0].scrollHeight && !$(this).hasClass("home") && !mobileBrowser)
   {
     $('#allSections').addClass('hide-apply');
     $('.website-grid').removeClass('grid-hide');
@@ -238,9 +239,9 @@ $(document).ready(function() {
 
 
         // DO IF MOBILE
-          let mobileBrowser = checkMobile()
-          if(mobileBrowser){
-          }
+          // let mobileBrowser = checkMobile()
+          // if(mobileBrowser){
+          // }
 
 
 
