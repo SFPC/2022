@@ -1789,6 +1789,17 @@ section.stacked-4 {
             text-decoration-thickness: 2px;
         }
 
+        .website-grid {
+          display: none;
+          visibility: hidden;
+          pointer-events: none;
+        }
+
+        .link-show-grid {
+          pointer-events: none;
+          text-decoration: none;
+        }
+
 
 
 
