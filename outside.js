@@ -158,6 +158,16 @@ $(window).scroll(function(){
 });
 
 
+// SMOOTH SCROLL TO ALL ANCHORS
+$(document).on('click', 'a[href^="#"]', function (event) {
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 500);
+});
+
+
 // SMOOTH SCROLL TO COST SECTION
 $(".more-about-cost").click(function() {
   document.getElementById('section-cost').scrollIntoView({
@@ -166,8 +176,8 @@ $(".more-about-cost").click(function() {
   });
 });
 
-$(".citation#1").each().click(function() {
-  document.getElementById('#1').href.scrollIntoView({
+$(".citation #2").each().click(function() {
+  document.getElementById('#2').href.scrollIntoView({
     block: 'start',
     behavior: 'smooth',
   });

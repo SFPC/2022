@@ -785,10 +785,6 @@ select#allSections:focus {
         line-height: 1.2;
       }
 
-
-
-
-
       .grid-4.featured .dot {
         display: block;
         visibility: hidden;
@@ -1450,12 +1446,6 @@ section.stacked-4 {
 
 
 
-
-
-
-
-
-
   span.expand {
       display: inline;
       /* margin: 0 3px; */
@@ -1520,6 +1510,32 @@ section.stacked-4 {
 #class.afterClass .show-afterClass, #class.afterClass .show-duringClass {
   display: inherit !important;
 }
+
+
+.supporters {
+}
+.supporters ul{
+  -webkit-column-count: 2; /* Chrome, Safari, Opera */
+   -moz-column-count: 2; /* Firefox */
+   column-count: 2;
+     list-style: none;
+     padding-inline-start: 0px !important;
+     margin-top: var(--body-margin);
+     margin-bottom: 0px !important;
+       max-height: 100vh;
+       overflow: scroll;
+}
+
+.supporters ul li {
+    margin-bottom: 0px !important;
+    width: calc(100% - var(--body-margin));
+}
+
+
+
+
+
+
 
 
 
