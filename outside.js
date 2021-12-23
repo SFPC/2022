@@ -215,10 +215,14 @@ $('#shell').bind('scroll', function()
     $('#allSections').addClass('hide-apply');
     $('.website-grid').removeClass('grid-hide');
     $('#inner-footer').addClass('hide-apply');
+    // $('.fixed-apply').addClass('hide-apply');
+    $('.breadcrumb').addClass('hide-apply');
   } else {
     $('#allSections').removeClass('hide-apply');
     $('.website-grid').addClass('grid-hide');
     $('#inner-footer').removeClass('hide-apply');
+    // $('.fixed-apply').removeClass('hide-apply');
+    $('.breadcrumb').removeClass('hide-apply');
   }
 });
 
@@ -232,6 +236,12 @@ $(window).on("load", function() {
 /////////////////////// DOCU READY //////////////////////////
 
 $(document).ready(function() {
+
+        // WEB GRID ASCII
+        $('.chars').html(makeChars(2000));
+        $('.chars2').html(makeChars(2000));
+        $('.chars3').html(makeChars(2000));
+        $('.chars4').html(makeChars(2000));
 
 
         // INTRO BIO EXPAND
@@ -250,6 +260,9 @@ $(document).ready(function() {
           // let mobileBrowser = checkMobile()
           // if(mobileBrowser){
           // }
+
+
+
 
 
 
@@ -418,8 +431,18 @@ $(document).ready(function() {
 
 
 
+// RANDOM CHARACTERS
 
-
+function makeChars(length) {
+    var result           = '';
+    var characters       = ',·*.◌';
+    var charactersLength = characters.length;
+    for ( var i = 0; i < length; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() *
+ charactersLength));
+   }
+   return result;
+}
 
 
 

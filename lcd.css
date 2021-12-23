@@ -15,14 +15,14 @@
     --spring-2022-link: #777744; */
 
 
-
+/*
     --spring-2022-background: #dedede;
     --spring-2022-text: #0F2BD4;
-    --spring-2022-link: #58595b;
+    --spring-2022-link: #58595b; */
 
-    /* --spring-2022-background: #e5e3e4;
+    --spring-2022-background: #e5e3e4;
     --spring-2022-text: #555658;
-    --spring-2022-link: #ff5e4a; */
+    --spring-2022-link: #ff5e4a;
 
 
 
@@ -55,7 +55,7 @@ select#allSections {
 
 
 .test, .block-text {
-  border-color: var(--text-link);
+  border-color: var(--text-color);
 }
 
 .spring-2022 {

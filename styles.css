@@ -234,7 +234,7 @@ h3, section .grid-2 p, .block-text, section .grid-2 ul {
 
 
 
-h4, .roles, caption, figure {
+h4, .roles, caption, figure, p.small, .small {
   font-size: var(--small-text);
   font-weight: bold;
   font-family: var(--main-title-font);
@@ -305,7 +305,8 @@ img {
   -moz-transition: all .2s ease-in-out;
   ms-transition: all .2s ease-in-out;
   o-transition: all .2s ease-in-out;
-  pointer-events: none
+  pointer-events: none;
+  gap: var(--body-margin);
 }
 
 .grid-hide {
@@ -324,9 +325,20 @@ img {
   border-radius: var(--border-rad);
   height: calc(100vh - calc(var(--body-margin)*2));
   box-sizing: border-box;
+  /* display: flex; */
+}
+
+.grid-inner section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+      justify-content: space-between;
+      column-gap: var(--body-margin);
+      /* width: calc(100% - var(--body-margin)*3); */
 }
 
 .website-grid .grid-2 {
+    position: relative;
     border: 2px solid var(--text-color);
     height: calc(100vh - calc(var(--body-margin)*2) - 4px);
     line-height: calc(100vh - calc(var(--body-margin)*2));
@@ -334,17 +346,40 @@ img {
     border-radius: var(--border-rad);
     text-align: center;
     box-sizing: border-box;
+    /* max-width: calc(25% - calc(var(--body-margin))); */
     /* margin-top: calc(var(--header-height) - var(--body-margin)/2) ; */
+    width: 25%;
+    overflow: hidden;
+}
+
+.website-grid .grid-2 p.large {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    text-align: center;
+    text-shadow: 3px 3px var(--background);
+    width: 100%;
+  padding-right: 0px !important;
+  /* line-height: calc(170vh); */
+  vertical-align: bottom;
+}
+
+
+.chars {
+  position: relative;
+  left: 0px;
+  top: 0px;
+  line-height: 1;
+  color: var(--text-link);
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: none;
+  font-family: var(--main-special-font);
+  text-align: justify;
 }
 
 #inner-footer {
   text-align: center;
-}
-
-.website-grid .grid-2 p {
-  padding-right: 0px !important;
-  line-height: calc(170vh);
-  vertical-align: bottom;
 }
 
 .shell {
@@ -1349,10 +1384,11 @@ section.stacked-4 {
             border-style: solid;
             font-family: courier;
             box-sizing: border-box;
+            color: var(--text-link);
           }
 
           .block-text:hover {
-            box-shadow: 0px 0px 15px var(--text-link);
+            box-shadow: 0px 0px 15px var(--text-color);
           }
 
           .hide-test {
