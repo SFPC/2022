@@ -158,16 +158,6 @@ $(window).scroll(function(){
 });
 
 
-// SMOOTH SCROLL TO ALL ANCHORS
-$(document).on('click', 'a[href^="#"]', function (event) {
-    event.preventDefault();
-
-    $('html, body').animate({
-        scrollTop: $($.attr(this, 'href')).offset().top
-    }, 500);
-});
-
-
 // SMOOTH SCROLL TO COST SECTION
 $(".more-about-cost").click(function() {
   document.getElementById('section-cost').scrollIntoView({
@@ -176,8 +166,8 @@ $(".more-about-cost").click(function() {
   });
 });
 
-$(".citation #2").each().click(function() {
-  document.getElementById('#2').href.scrollIntoView({
+$("a.citation").click(function() {
+  document.getElementById('ref-1').href.scrollIntoView({
     block: 'start',
     behavior: 'smooth',
   });
@@ -193,12 +183,20 @@ function sectionJump(value){
 }
 
 // SHOW APPLY ON SCROLL
+let mobileBrowser = checkMobile()
+
 $('.shell').scroll(function () {
     var y = $(this).scrollTop();
     if (y > 800) {
       $('.fixed-apply').removeClass('hide-apply');
     } else {
       $('.fixed-apply').addClass('hide-apply');
+    }
+
+    if (y > 200 && !mobileBrowser) {
+      $('.breadcrumb').addClass('fixed');
+    } else {
+      $('.breadcrumb').removeClass('fixed');
     }
   });
 
@@ -210,7 +208,7 @@ $('#shell').bind('scroll', function()
 
   // if (!$(this).hasClass("test")) {
 
-  let mobileBrowser = checkMobile()
+  let mobileBrowser = checkMobile();
 
   if($(this).scrollTop() + $(this).innerHeight()>=$(this)[0].scrollHeight && !$(this).hasClass("home") && !mobileBrowser)
   {

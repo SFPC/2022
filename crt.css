@@ -206,11 +206,12 @@ select#allSections, .fixed-apply  {
     text-shadow: 2.6208764473832513px 0 1px rgba(0,30,255,0.5), -2.6208764473832513px 0 1px rgba(255,0,80,0.3), 0 0 3px;
   }
 }
-#shell::after {
+/* #shell::after, */
+.crt-overlay::after {
   content: " ";
   display: block;
   position: fixed;
-  top: 0;
+  top: var(--header-height);
   left: 0;
   bottom: 0;
   right: 0;
@@ -219,12 +220,15 @@ select#allSections, .fixed-apply  {
   z-index: 999999999999999999999999999;
   pointer-events: none;
   animation: flicker 1s infinite;
+    height: calc(100% - var(--footer-height) - var(--header-height));
 }
-#shell::before {
+/* #shell::before  */
+.crt-overlay::before
+{
   content: " ";
   display: block;
   position: fixed;
-  top: 0;
+  top: var(--header-height);
   left: 0;
   bottom: 0;
   right: 0;
@@ -232,12 +236,13 @@ select#allSections, .fixed-apply  {
   z-index: 999999999999999999999999999;
   background-size: 100% 2px, 3px 100%;
   pointer-events: none;
+    height: calc(100% - var(--footer-height) - var(--header-height));
 }
 
 #shell h1
 /* , #shell p.large */
 /* , #shell p.large a */
-/* , #shell p.large:hover  */
+/* , #shell p.large:hover */
 {
   /* animation: textShadow 10s infinite; */
 }
