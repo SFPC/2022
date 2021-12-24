@@ -252,5 +252,5 @@ select#allSections, .fixed-apply  {
 /* , #shell p.large a */
 /* , #shell p.large:hover */
 {
-  /* animation: textShadow 10s infinite; */
+  animation: textShadow 10s infinite;
 }

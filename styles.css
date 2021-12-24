@@ -204,11 +204,25 @@ h3, section .grid-2 p, .block-text, section .grid-2 ul {
 
       section .grid-2 ul li{
         margin-bottom: var(--body-margin);
+
       }
 
       .grid-2 p, section .grid-2 ul {
         padding-right: calc(var(--text-margin)/2);
+        list-style: none;
       }
+
+      section .grid-2 ul li::before {
+        content: "◦";
+        color: var(--text-link);
+        font-weight: bold;
+        font-size: var(--small-text);
+        line-height: var(--medium-text);
+        display: inline-block;
+        width: 1.5em;
+        margin-left: -1.5em;
+      }
+
 
 
         .top h3 {
@@ -293,7 +307,7 @@ img {
 .website-grid {
   position: fixed;
   background: var(--background);
-  padding: calc(var(--body-margin)/2);
+  padding: calc(var(--body-margin)/2) calc(var(--body-margin)/2) var(--footer-height) calc(var(--body-margin)/2);
   z-index: 999999999999999999999999999999;
   top: 0px;
   left: 0px;
@@ -323,7 +337,7 @@ img {
   padding: 0 var(--body-margin) 0 var(--body-margin);
   border: 2px dotted var(--text-color);
   border-radius: var(--border-rad);
-  height: calc(100vh - calc(var(--body-margin)*2));
+  height: calc(100vh - calc(var(--body-margin)/2) - var(--footer-height));
   box-sizing: border-box;
   /* display: flex; */
 }
@@ -340,7 +354,7 @@ img {
 .website-grid .grid-2 {
     position: relative;
     border: 2px solid var(--text-color);
-    height: calc(100vh - calc(var(--body-margin)*2) - 4px);
+    height: calc(100vh - calc(var(--body-margin)/2)  - var(--footer-height) - 4px);
     line-height: calc(100vh - calc(var(--body-margin)*2));
     display: block;
     border-radius: var(--border-rad);
@@ -611,7 +625,7 @@ section {
 
 
       .break-endpage {
-        margin-bottom: calc(var(--text-margin)*3);
+        margin-bottom: calc(var(--text-margin)*2);
       }
 
       .break-noline {
@@ -891,7 +905,9 @@ h4.breadcrumb {
             border-radius: calc(var(--border-rad));
             display: inline;
             width: calc(var(--small-text) + var(--body-margin)/2);
-            height: calc(var(--small-text) + var(--body-margin)/2);
+            /* height: calc(var(--small-text) + var(--body-margin)/2); */
+            height: var(--footer-height);
+            line-height: 1;
             overflow: hidden;
             border: 0px;
             cursor: pointer;
@@ -900,7 +916,7 @@ h4.breadcrumb {
             font-family: var(--main-title-font);
             font-weight: bold;
             /* font-size: var(--medium-text); */
-            line-height: var(--small-line-height);
+            /* line-height: var(--small-line-height); */
             color: var(--text-color);
 
             /* color: #000; */
@@ -974,6 +990,7 @@ p a, .details a {
 
 a.citation {
     text-decoration-style: dotted !important;
+    cursor: pointer;
 }
 
 sup {
@@ -981,6 +998,7 @@ sup {
     font-size: var(--medium-text);
     /* font-weight: bold; */
     font-family: var(--main-special-font);
+    color: var(--text-link);
 }
 
 span.reference {
@@ -1525,7 +1543,7 @@ section.stacked-4 {
         }
 
         span#cost{
-            background: var(--text-color);
+            background: var(--text-link);
             border-radius: var(--border-rad);
             padding: 1px 5px;
             color: var(--background);
@@ -1653,6 +1671,11 @@ section.stacked-4 {
 }
 
 
+.supporters ul li::before {
+  content: "" !important;
+  width: 0px !important;
+  margin-left: 0px !important;
+}
 
 
 

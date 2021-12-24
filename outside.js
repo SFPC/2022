@@ -1,4 +1,46 @@
 
+// CHECK MOBILE
+let mobileBrowser = checkMobile()
+
+
+// MODES CONTENT
+
+let inCRT = 'you are in cathode-ray mode. switch to liquid crystal mode.'
+let inLDC = 'you are in liquid crystal mode. switch to cathode-ray mode.'
+
+// var inCRT = 'switch to liquid crystal mode.'
+// var inLDC = 'switch to cathode-ray mode.'
+//
+// if checkMobile() {
+//   inCRT = 'switch to liquid crystal mode.'
+//   inLDC = 'switch to cathode-ray mode.'
+// } else {
+//   inCRT = 'you are in cathode-ray mode. switch to liquid crystal mode.'
+//   inLDC = 'you are in liquid crystal mode. switch to cathode-ray mode.'
+// }
+
+
+
+
+
+
+// CLOSE WEBSITE ON WEEKEND
+function closed() {
+  var currentTime = new Date();
+  var currentHour = currentTime.getHours();
+  var isWeekend = currentTime.getDay()%6==0;
+
+  if ((currentHour < 9) || (currentHour > 19) || isWeekend) {
+    window.location.replace("closed.html");
+  }
+}
+
+var notClosed = window.location.href.indexOf('closed') == -1;
+if (notClosed) {
+   // closed();
+}
+
+
 
 
 // ENTITY ACCORDION
@@ -72,6 +114,9 @@ for (let i = 0; i <= 19; i += 1) {
     participateImages.push("images/community/" + a[i].toString() + ".jpg");
 }
 
+var c1 = participateImages[Math.floor( Math.random() * participateImages.length )];
+
+
 $(".pi1 img").attr("src", pi1);
 $(".pi2 img").attr("src", participateImages[2]);
 $(".pi3 img").attr("src", participateImages[3]);
@@ -103,6 +148,8 @@ $(".si8 img").attr("src", spaceImages[8]);
 $(".si9 img").attr("src", spaceImages[9]);
 $(".si10 img").attr("src", spaceImages[10]);
 
+
+$("img.c1").attr("src", c1);
 
 
 
@@ -166,8 +213,31 @@ $(".more-about-cost").click(function() {
   });
 });
 
-$("a.citation").click(function() {
-  document.getElementById('ref-1').href.scrollIntoView({
+// SMOOTH SCROLL TO CITATIONS
+
+$(".cit-1").click(function() {
+  document.getElementById('ref-1').scrollIntoView({
+    block: 'start',
+    behavior: 'smooth',
+  });
+});
+
+$(".cit-2").click(function() {
+  document.getElementById('ref-2').scrollIntoView({
+    block: 'start',
+    behavior: 'smooth',
+  });
+});
+
+$(".cit-3").click(function() {
+  document.getElementById('ref-3').scrollIntoView({
+    block: 'start',
+    behavior: 'smooth',
+  });
+});
+
+$(".cit-4").click(function() {
+  document.getElementById('ref-4').scrollIntoView({
     block: 'start',
     behavior: 'smooth',
   });
@@ -183,8 +253,6 @@ function sectionJump(value){
 }
 
 // SHOW APPLY ON SCROLL
-let mobileBrowser = checkMobile()
-
 $('.shell').scroll(function () {
     var y = $(this).scrollTop();
     if (y > 800) {
@@ -234,11 +302,16 @@ $(window).on("load", function() {
 
 
 /////////////////////// DOCU READY //////////////////////////
+// setTimeout("closed()", 1);
 
 $(document).ready(function() {
 
+  // closed();
+
+
+
         // WEB GRID ASCII
-        $('.chars').html(makeChars(2000));
+        $('.chars1').html(makeChars(2000));
         $('.chars2').html(makeChars(2000));
         $('.chars3').html(makeChars(2000));
         $('.chars4').html(makeChars(2000));
@@ -435,7 +508,7 @@ $(document).ready(function() {
 
 function makeChars(length) {
     var result           = '';
-    var characters       = ',·*.◌';
+    var characters       = ',·*.◌▫◦........';
     var charactersLength = characters.length;
     for ( var i = 0; i < length; i++ ) {
       result += characters.charAt(Math.floor(Math.random() *
