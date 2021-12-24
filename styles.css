@@ -1968,6 +1968,10 @@ section.stacked-4 {
            column-count: 2;
         }
 
+        #footer .mode {
+          text-align: center;
+        }
+
 
 
 

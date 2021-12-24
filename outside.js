@@ -6,7 +6,12 @@ let mobileBrowser = checkMobile()
 // MODES CONTENT
 
 let inCRT = 'you are in cathode-ray mode. switch to liquid crystal mode.'
-let inLDC = 'you are in liquid crystal mode. switch to cathode-ray mode.'
+let inLCD = 'you are in liquid crystal mode. switch to cathode-ray mode.'
+
+if (checkMobile()) {
+  inCRT = 'switch to liquid crystal mode'
+  inLCD = 'switch to cathode-ray mode'
+}
 
 // var inCRT = 'switch to liquid crystal mode.'
 // var inLDC = 'switch to cathode-ray mode.'
@@ -446,10 +451,10 @@ $(document).ready(function() {
         // MODE TEXT
 
           if (modeStyles.href.includes('lcd')) {
-            themeToggle.innerText = 'you are in liquid crystal mode. switch to cathode-ray mode.'
+            themeToggle.innerText = inLCD
             $('#current-mode').html('liquid crystal')
           } else {
-            themeToggle.innerText = 'you are in cathode-ray mode. switch to liquid crystal mode.'
+            themeToggle.innerText = inCRT
             $('#current-mode').html('cathode-ray')
           }
 
@@ -555,10 +560,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (modeStyles.href.includes('lcd')) {
       modeStyles.href = 'crt.css';
       // $('#shell').addClass('crt');
-      themeToggle.innerText = 'you are in cathode-ray mode. switch to liquid crystal mode.';
+      themeToggle.innerText = inCRT;
     } else {
       modeStyles.href = 'lcd.css';
-      themeToggle.innerText = 'you are in liquid crystal mode. switch to cathode-ray mode.';
+      themeToggle.innerText = inLCD;
     }
     localStorage.setItem('mode',modeStyles.href)
   })
