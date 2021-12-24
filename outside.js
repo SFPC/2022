@@ -93,8 +93,8 @@ for (let i = 0; i <= 2; i += 1) {
 var pi1 = participateImagesFeatured[Math.floor( Math.random() * participateImagesFeatured.length )];
 var si1 = spaceImagesFeatured[Math.floor( Math.random() * spaceImagesFeatured.length )];
 
-for (var a=[],i=0;i<118;++i) a[i]=i; //community images
-for (var b=[],i=0;i<14;++i) b[i]=i; //space images
+for (var a=[],i=0;i<119;++i) a[i]=i; //community images
+for (var b=[],i=0;i<17;++i) b[i]=i; //space images
 
 function shuffle(array) {
   var tmp, current, top = array.length;
