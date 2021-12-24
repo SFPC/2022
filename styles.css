@@ -991,6 +991,7 @@ p a, .details a {
 a.citation {
     text-decoration-style: dotted !important;
     cursor: pointer;
+    display: inline;
 }
 
 sup {
