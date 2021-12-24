@@ -441,12 +441,6 @@ img {
     o-transition: all .2s linear;
 }
 
-.crt-overlay-fullsize {
-  height: calc(100% - var(--footer-height) - var(--header-height));
-  top: var(--header-height);
-  bottom: auto;
-  position: fixed;
-}
 
 
 
@@ -1862,6 +1856,7 @@ section.stacked-4 {
           height: calc(80% - var(--footer-height) - var(--header-height));
           top: calc(var(--header-height) + 20%) ;
         }
+
 
         section.stacked-4 .grid-1{
           grid-template-columns: repeat(2,1.2fr);

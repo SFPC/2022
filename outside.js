@@ -406,7 +406,9 @@ $(document).ready(function() {
           $(".mobile-menu").click(function() {
               // $(".shell").addClass('shell-halfsize').removeClass('shell-fullsize');
               $(".shell").toggleClass('shell-halfsize');
-              $(".shell").toggleClass('full-halfsize');
+              $(".shell").toggleClass('shell-fullsize');
+              $(".crt-overlay").toggleClass('crt-overlay-halfsize');
+              $(".crt-overlay").toggleClass('crt-overlay--fullsize');
               $(".mobile-menu-content").toggleClass('mobile-menu-content-show');
 
               if ($(".mobile-menu").text() == "Menu") {

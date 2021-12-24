@@ -228,7 +228,7 @@ select#allSections, .fixed-apply  {
   z-index: 999999999999999999999999999;
   pointer-events: none;
   animation: flicker 1s infinite;
-  height: calc(100% - var(--footer-height) - var(--header-height));
+  /* height: calc(100% - var(--footer-height) - var(--header-height)); */
 }
 /* #shell::before  */
 .crt-overlay::before
@@ -244,7 +244,16 @@ select#allSections, .fixed-apply  {
   z-index: 999999999999999999999999999;
   background-size: 100% 2px, 3px 100%;
   pointer-events: none;
+  /* height: calc(100% - var(--footer-height) - var(--header-height)); */
+}
+
+.crt-overlay-fullsize::after, .crt-overlay-fullsize::before {
   height: calc(100% - var(--footer-height) - var(--header-height));
+}
+
+.crt-overlay-halfsize::after, .crt-overlay-halfsize::before {
+  height: calc(80% - var(--footer-height) - var(--header-height));
+  top: calc(var(--header-height) + 20%) ;
 }
 
 #shell h1
