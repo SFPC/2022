@@ -36,8 +36,12 @@ function closed() {
 }
 
 var notClosed = window.location.href.indexOf('closed') == -1;
+var isClosed = window.location.href.indexOf('closed') == 1;
+
 if (notClosed) {
    // closed();
+} else {
+  $('.mobile-menu').addClass('hide-menu');
 }
 
 
@@ -89,7 +93,7 @@ for (let i = 0; i <= 2; i += 1) {
 var pi1 = participateImagesFeatured[Math.floor( Math.random() * participateImagesFeatured.length )];
 var si1 = spaceImagesFeatured[Math.floor( Math.random() * spaceImagesFeatured.length )];
 
-for (var a=[],i=0;i<111;++i) a[i]=i; //community images
+for (var a=[],i=0;i<118;++i) a[i]=i; //community images
 for (var b=[],i=0;i<14;++i) b[i]=i; //space images
 
 function shuffle(array) {

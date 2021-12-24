@@ -555,6 +555,11 @@ a {
           o-transition: all .2s ease-in-out;
         }
 
+        .mobile-menu.hide-menu {
+          /* opacity: 0; */
+          pointer-events: none;
+        }
+
         .logo:hover, .mobile-menu:hover {
           opacity: .6;
         }
@@ -918,28 +923,29 @@ h4.breadcrumb {
             /* font-size: var(--medium-text); */
             /* line-height: var(--small-line-height); */
             color: var(--text-color);
-
             /* color: #000; */
             padding: var(--program-margin);
-            transition: all .2s ease-in-out;
-            -moz-transition: all .2s ease-in-out;
-            ms-transition: all .2s ease-in-out;
-            o-transition: all .2s ease-in-out;
+            transition: all .2s ease-in;
+            -moz-transition: all .2s ease-in;
+            ms-transition: all .2s ease-in;
+            o-transition: all .2s ease-in;
             backdrop-filter: blur(3px);
         }
 
-        .breadcrumb.fixed a {
+        .breadcrumb.fixed a, .breadcrumb.fixed span {
           opacity: 0;
           width: 0px;
+          display: none;
         }
 
         .breadcrumb.fixed:hover {
           width: auto;
         }
 
-        .breadcrumb.fixed:hover a {
+        .breadcrumb.fixed:hover a, .breadcrumb.fixed:hover span {
           opacity: 1;
           width: auto;
+          display: inline-block;
         }
 
         .breadcrumb.fixed:before {
