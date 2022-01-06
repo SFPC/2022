@@ -256,10 +256,15 @@ select#allSections, .fixed-apply  {
   top: calc(var(--header-height) + 20%) ;
 }
 
-#shell h1
-, #shell p.large
-/* , #shell p.large a */
-/* , #shell p.large:hover */
-{
-  animation: textShadow 10s infinite;
+
+@media (max-width: 768px) {
+
+    #shell h1
+    , #shell p.large
+    /* , #shell p.large a */
+    /* , #shell p.large:hover */
+    {
+      animation: textShadow 10s infinite;
+    }
+
 }
