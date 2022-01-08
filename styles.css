@@ -736,7 +736,7 @@ select#allSections:focus {
         }
 
 
-.grid-1 {
+.grid-1, .grid-1-img {
   display: flex;
   justify-content: space-between;
   column-gap: var(--body-margin);
@@ -746,9 +746,14 @@ select#allSections:focus {
       }
 
 
-      .grid-1 .grid-4 {
+      .grid-1 .grid-4, .grid-1-img .grid-4 {
         display: flex;
         width: 25%;
+      }
+
+      .grid-1-img img {
+          box-sizing: border-box;
+          border-radius: var(--border-rad);
       }
 
       .grid-1 .grid-2 {
@@ -1715,6 +1720,13 @@ section.stacked-4 {
         .grid-1 .grid-2, .grid-1 .grid-4 {
           width: 100%;
           margin-bottom: calc(var(--body-margin)*2);
+        }
+
+        .grid-1-img .grid-4 {
+          width: calc(50% - var(--body-margin)) !important;
+          display: inline-block;
+          margin-bottom: var(--body-margin);
+          /* margin-bottom: calc(var(--body-margin)*2); */
         }
 
         .grid-2 p, .grid-2 ul {

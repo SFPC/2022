@@ -40,10 +40,10 @@ function closed() {
   }
 }
 
-var notClosed = window.location.href.indexOf('closed') == -1;
-var isClosed = window.location.href.indexOf('closed') == 1;
+var isClosed = window.location.href.indexOf('closed') == -1;
+var notClosed = window.location.href.indexOf('closed') == 1;
 
-if (notClosed) {
+if (isClosed) {
    // closed();
 } else {
   $('.mobile-menu').addClass('hide-menu');
