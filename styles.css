@@ -997,9 +997,14 @@ a.citation {
 sup {
     vertical-align: super;
     font-size: var(--medium-text);
-    /* font-weight: bold; */
     font-family: var(--main-special-font);
     color: var(--text-link);
+}
+
+.grid-2 .citation sup, .grid-2 sup {
+  font-size: var(--small-text) !important;
+  color: var(--text-link) !important;
+  font-weight: bold;
 }
 
 span.reference {

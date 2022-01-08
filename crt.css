@@ -214,6 +214,25 @@ select#allSections, .fixed-apply  {
     text-shadow: 2.6208764473832513px 0 1px rgba(0,30,255,0.5), -2.6208764473832513px 0 1px rgba(255,0,80,0.3), 0 0 3px;
   }
 }
+
+
+@keyframes textShadowBig {
+  0% {
+    text-shadow: 0.4389924193300864px 0 1px rgba(0,30,255,0.5), -0.4389924193300864px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  25% {
+    text-shadow: 1.6125630401149584px 0 1px rgba(0,30,255,0.5), -1.6125630401149584px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  50% {
+    text-shadow: 0.08084290417898504px 0 1px rgba(0,30,255,0.5), -0.08084290417898504px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  75% {
+    text-shadow: 1.8948491305757957px 0 1px rgba(0,30,255,0.5), -1.8948491305757957px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  100% {
+    text-shadow: 2.6208764473832513px 0 1px rgba(0,30,255,0.5), -2.6208764473832513px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+}
 /* #shell::after, */
 .crt-overlay::after {
   content: " ";
@@ -254,6 +273,16 @@ select#allSections, .fixed-apply  {
 .crt-overlay-halfsize::after, .crt-overlay-halfsize::before {
   height: calc(80% - var(--footer-height) - var(--header-height));
   top: calc(var(--header-height) + 20%) ;
+}
+
+
+#shell h1
+, #shell p.large
+/* , #shell p.large a */
+/* , #shell p.large:hover */
+{
+  text-shadow: 2.5px 0 1px rgba(0,30,255,0.5), -2.5px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+    /* animation: textShadowBig 1s infinite; */
 }
 
 
