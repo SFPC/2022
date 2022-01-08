@@ -216,12 +216,28 @@ h3, section .grid-2 p, .block-text, section .grid-2 ul {
         content: "◦";
         color: var(--text-link);
         font-weight: bold;
-        font-size: var(--small-text);
+        /* font-size: var(--small-text); */
         line-height: var(--medium-text);
         display: inline-block;
         width: 1.5em;
         margin-left: -1.5em;
       }
+
+      section .grid-2 ul li:nth-of-type(3n):before {
+          content: "*";
+        }
+
+      section .grid-2 ul li:nth-of-type(2n):before {
+          content: "▫";
+        }
+
+      section .grid-2 ul li:nth-of-type(4n):before {
+          content: "◌";
+        }
+       section .grid-2 ul li:nth-of-type(5n):before {
+           content: "‣";
+         }
+
 
 
 

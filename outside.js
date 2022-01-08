@@ -488,9 +488,10 @@ $(document).ready(function() {
             window.location = $(this).find("a").attr("href");
             });
 
-            $(".featured h2").click(function() {
+            $(".featured h2, .featured h6, .featured h4").click(function() {
             window.location = $(this).parent().closest('div').find("a").attr("href");
             });
+
 
 
         // SCROLL ON MOBILE
