@@ -281,7 +281,7 @@ select#allSections, .fixed-apply  {
 /* , #shell p.large a */
 /* , #shell p.large:hover */
 {
-  text-shadow: 2.5px 0 1px rgba(0,30,255,0.5), -2.5px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  text-shadow: 3px 0 1px rgba(0,30,255,0.5), -3px 0 1px rgba(255,0,80,0.3), 0 0 3px;
     /* animation: textShadowBig 1s infinite; */
 }
 
