@@ -395,6 +395,7 @@ $(document).ready(function() {
 
           $(".expand-intro").click(function() {
               $(".expanded-intro").removeClass('hide-expanded');
+              $(".expand-intro").addClass('hide-expanded');
           });
 
 
