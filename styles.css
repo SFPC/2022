@@ -640,7 +640,7 @@ section {
 
 
       .break-endpage {
-        margin-bottom: calc(var(--text-margin)*2);
+        margin-bottom: calc(var(--text-margin)*3);
       }
 
       .break-noline {
