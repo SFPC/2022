@@ -392,6 +392,14 @@ $(document).ready(function() {
 
 
 
+
+          $(".expand-intro").click(function() {
+              $(".expanded-intro").removeClass('hide-expanded');
+          });
+
+
+
+
         // TESTIMONIALS + PHOTOS TOGGLE
 
           $(".testimonials").click(function() {
